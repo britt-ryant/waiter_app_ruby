@@ -101,3 +101,25 @@ UserDish.create ([
       dish_id: 5
     },
 ])
+UserIngredient.create ([
+    {
+      user_id: 1,
+      ingredient_id: 1
+    },
+    {
+      user_id: 1,
+      ingredient_id: 2
+    },
+    {
+      user_id: 1,
+      ingredient_id: 3
+    },
+    {
+      user_id: 1,
+      ingredient_id: 4
+    },
+    {
+      user_id: 1,
+      ingredient_id: 5
+    },
+])
