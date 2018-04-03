@@ -123,4 +123,12 @@ UserIngredient.create ([
       user_id: 1,
       ingredient_id: 5
     },
+    {
+      user_id: 2,
+      ingredient_id: 4
+    },
+    {
+      user_id: 2,
+      ingredient_id: 5
+    },
 ])
