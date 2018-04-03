@@ -3,8 +3,10 @@ class UsersController < ApplicationController
     @users = User.all
   end
   def show
+    #make a click on each user and show their specific order
   end
   def new
+    #
   end
   def create
   end
