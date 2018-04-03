@@ -1,0 +1,8 @@
+<% @users.each do |user| %>
+    <p><%=user[:email]%></p>
+  <% user.dishes.each do |dish| %>
+      <p><%=dish[:name]%></p>
+
+
+  <% end %>
+<% end %>
