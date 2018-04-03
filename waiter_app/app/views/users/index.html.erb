@@ -1,8 +1,10 @@
 <% @users.each do |user| %>
-    <p><%=user[:email]%></p>
+    <p><%=user[:email]%>:</p>
   <% user.dishes.each do |dish| %>
       <p><%=dish[:name]%></p>
-
-
+  <% end %>
+  <strong>Alergies:</strong>
+  <% user.ingredients.each do |ingredient| %>
+      <p><%=ingredient[:name]%></p>
   <% end %>
 <% end %>

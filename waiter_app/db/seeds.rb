@@ -100,7 +100,7 @@ UserDish.create ([
     {
       user_id: 1,
       dish_id: 5
-    },
+    }
 ])
 UserIngredient.create ([
     {
@@ -130,5 +130,5 @@ UserIngredient.create ([
     {
       user_id: 2,
       ingredient_id: 5
-    },
+    }
 ])
