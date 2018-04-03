@@ -1,5 +1,6 @@
 class Ingredient < ApplicationRecord
-  has_many :dishes, through: :ingredients_dishes
+  # belongs_to :dish
   has_many :ingredients_dishes
+  has_many :dishes, through: :ingredients_dishes
 
 end
