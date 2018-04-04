@@ -3119,3 +3119,168 @@ Processing by DishesController#index as HTML
 Completed 200 OK in 29ms (Views: 25.1ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/dishes" for 127.0.0.1 at 2018-04-03 20:26:03 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dishes/new" for 127.0.0.1 at 2018-04-03 20:26:05 -0400
+Processing by DishesController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/new.html.erb within layouts/application
+  Rendered dishes/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 41ms (Views: 34.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/dishes" for 127.0.0.1 at 2018-04-03 20:26:16 -0400
+Processing by DishesController#create as HTML
+  Parameters: {"dish"=>{"name"=>"Garden Salad", "course"=>"1", "cost"=>"13"}, "authenticity_token"=>"aDUSd0TTRJETGMARg6o3Z+p7XtymDwwhHl041CngdZ5kpHXAc0MG7GIQiiConw7zPF1fEtOkEPY8C2yTHjaTQA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dishes" ("name", "course", "cost", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Garden Salad"], ["course", 1], ["cost", 13], ["created_at", "2018-04-04 00:26:16.988590"], ["updated_at", "2018-04-04 00:26:16.988590"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 11ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-04-03 20:26:16 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 33ms (Views: 29.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/dishes/13" for 127.0.0.1 at 2018-04-03 20:27:01 -0400
+Processing by DishesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1vLDvFdzFhuqRuGb0uT//+lBwUyFo0SlEPnyYou1SpbaY6QLYONUZttOq6r50cZrP2fAgvAIWHIyr6YlvGOsSA==", "id"=>"13"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35mSQL (5.8ms)[0m  [1m[31mDELETE FROM "dishes" WHERE "dishes"."id" = $1[0m  [["id", 13]]
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 10ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-04-03 20:27:01 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 31ms (Views: 26.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dishes/new" for 127.0.0.1 at 2018-04-03 20:27:02 -0400
+Processing by DishesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/new.html.erb within layouts/application
+  Rendered dishes/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 39ms (Views: 32.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/dishes" for 127.0.0.1 at 2018-04-03 20:27:17 -0400
+Processing by DishesController#create as HTML
+  Parameters: {"dish"=>{"name"=>"Garden Salad", "description"=>"Who knew romaine lettuce tasted this good?", "course"=>"1", "cost"=>"13"}, "authenticity_token"=>"xPG3zBrM6jtlNNoz3sA0DLQlQfpgRgAqBXC0aQhowE7IYNB7LVyoRhQ8kAL19Q2YYgNANBXtHP0nJuAuP74mkA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dishes" ("name", "description", "course", "cost", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Garden Salad"], ["description", "Who knew romaine lettuce tasted this good?"], ["course", 1], ["cost", 13], ["created_at", "2018-04-04 00:27:17.920979"], ["updated_at", "2018-04-04 00:27:17.920979"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 11ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-04-03 20:27:17 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-04-03 20:30:28 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 26.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dishes/4" for 127.0.0.1 at 2018-04-03 20:30:30 -0400
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (184.1ms)
+Completed 500 Internal Server Error in 203ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `dish' for #<#<Class:0x00007f9ac2b155f8>:0x00007f9ac04e77c8>
+Did you mean?  @dish):
+    3:   <p><%= @dish.description %></p>
+    4:   <p>Course: <%= @dish.course %></p>
+    5:   <p>Cost: $<%= @dish.cost %></p>
+    6:   <%= link_to "Edit this dish?", edit_dish_path(dish.id) %>
+    7:   <%= link_to "Delete this dish?", dish_path(dish.id), method: :delete %>
+    8: </div>
+  
+app/views/dishes/show.html.erb:6:in `_app_views_dishes_show_html_erb___38269791377047475_70151315710460'
+Started GET "/dishes" for 127.0.0.1 at 2018-04-03 20:30:43 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 35ms (Views: 31.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dishes/4" for 127.0.0.1 at 2018-04-03 20:30:44 -0400
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 56ms (Views: 49.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dishes/4/edit" for 127.0.0.1 at 2018-04-03 20:30:46 -0400
+Processing by DishesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering dishes/edit.html.erb within layouts/application
+  Rendered dishes/edit.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 29.4ms | ActiveRecord: 0.4ms)
+
+
+Started PUT "/dishes/4" for 127.0.0.1 at 2018-04-03 20:30:52 -0400
+Processing by DishesController#update as HTML
+  Parameters: {"authenticity_token"=>"f1iEMW0N67zc9G/kThKNLVUVce3cSbntzaS/3giQgplzyeOGWp2pwa38JdVlJ7S5gzNwI6nipTrv8uuZP0ZkRw==", "dish"=>{"name"=>"Cobb Salad DUH BOMB", "description"=>"This is healthy, right?", "course"=>"1"}, "id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "dishes" SET "name" = $1, "course" = $2, "updated_at" = $3 WHERE "dishes"."id" = $4[0m  [["name", "Cobb Salad DUH BOMB"], ["course", 1], ["updated_at", "2018-04-04 00:30:52.222377"], ["id", 4]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/dishes/4
+Completed 302 Found in 11ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/dishes/4" for 127.0.0.1 at 2018-04-03 20:30:52 -0400
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  Rendered dishes/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 23.4ms | ActiveRecord: 0.4ms)
+
+

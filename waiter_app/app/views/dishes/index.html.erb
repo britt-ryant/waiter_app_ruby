@@ -4,10 +4,11 @@
 <% @dishes.each do |dish| %>
     <br>
     <h3><%= dish.name %></h3>
+    <%= link_to "Let's get a closer look...", dish_path(dish.id) %>
     <hr>
     <p><%= dish.description %></p>
     <p>Course: <%= dish.course %></p>
-    <p>Cost  : <%= dish.cost %>$</p>
+    <p>Cost  :$<%= dish.cost %></p>
     <%= link_to "Edit this dish?", edit_dish_path(dish.id) %>
     <%= link_to "Delete this dish?", dish_path(dish.id), method: :delete %>
 <% end %>

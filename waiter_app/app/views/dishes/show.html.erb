@@ -1,2 +1,8 @@
-<h1>Dishes#show</h1>
-<p>Find me in app/views/dishes/show.html.erb</p>
+<div class = "container">
+  <h1><%= @dish.name %></h1>
+  <p><%= @dish.description %></p>
+  <p>Course: <%= @dish.course %></p>
+  <p>Cost: $<%= @dish.cost %></p>
+  <%= link_to "Edit this dish?", edit_dish_path(@dish.id) %>
+  <%= link_to "Delete this dish?", dish_path(@dish.id), method: :delete %>
+</div>
