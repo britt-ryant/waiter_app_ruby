@@ -556,9 +556,9 @@ Migrating to AddingMoreIndexes (20180403193627)
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
 Started GET "/users/sign-up" for 127.0.0.1 at 2018-04-03 16:08:28 -0400
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  
+
 ActionController::RoutingError (No route matches [GET] "/users/sign-up"):
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -587,9 +587,9 @@ puma (3.11.3) lib/puma/server.rb:438:in `process_client'
 puma (3.11.3) lib/puma/server.rb:302:in `block in run'
 puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/user/sign-up" for 127.0.0.1 at 2018-04-03 16:08:35 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/user/sign-up"):
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -618,9 +618,9 @@ puma (3.11.3) lib/puma/server.rb:438:in `process_client'
 puma (3.11.3) lib/puma/server.rb:302:in `block in run'
 puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/users/sign-up" for 127.0.0.1 at 2018-04-03 16:08:40 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/users/sign-up"):
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -649,7 +649,7 @@ puma (3.11.3) lib/puma/server.rb:438:in `process_client'
 puma (3.11.3) lib/puma/server.rb:302:in `block in run'
 puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/users/sign-up" for 127.0.0.1 at 2018-04-03 16:09:15 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/users/sign-up"):
 =======
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
@@ -681,10 +681,10 @@ Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/user/login" for 127.0.0.1 at 2018-04-03 16:07:57 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/user/login"):
 >>>>>>> 0869ff4a5c8fad3bcd93491dbf125db5638659ae
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -749,7 +749,7 @@ Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/uses/sign_up" for 127.0.0.1 at 2018-04-03 16:10:34 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/uses/sign_up"):
 =======
 Completed 302 Found in 37ms (ActiveRecord: 3.6ms)
@@ -763,10 +763,10 @@ Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/users" for 127.0.0.1 at 2018-04-03 16:08:41 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/users"):
 >>>>>>> 0869ff4a5c8fad3bcd93491dbf125db5638659ae
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -2249,17 +2249,12 @@ Completed 200 OK in 78ms (Views: 45.9ms | ActiveRecord: 6.8ms)
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-<<<<<<< HEAD
   [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
-=======
-  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
->>>>>>> 0869ff4a5c8fad3bcd93491dbf125db5638659ae
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
-<<<<<<< HEAD
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "dishes" ("name", "description", "course", "cost", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chicken Parm"], ["description", "This ain't yo mama's chicken parm."], ["course", 3], ["cost", 27], ["created_at", "2018-04-03 20:36:18.508936"], ["updated_at", "2018-04-03 20:36:18.508936"]]
@@ -2292,55 +2287,6 @@ Completed 200 OK in 78ms (Views: 45.9ms | ActiveRecord: 6.8ms)
   [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Beef"], ["description", "It's free range, I promise..."], ["created_at", "2018-04-03 20:36:18.543116"], ["updated_at", "2018-04-03 20:36:18.543116"]]
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-=======
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
-  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
-  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
-  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1371790593955793655)[0m
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1371790593955793655)[0m
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "dishes" ("name", "description", "course", "cost", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Chicken Parm"], ["description", "This ain't yo mama's chicken parm."], ["course", 3], ["cost", 27], ["created_at", "2018-04-03 20:33:00.943908"], ["updated_at", "2018-04-03 20:33:00.943908"]]
-  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "dishes" ("name", "description", "course", "cost", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Meatloaf Sandwich"], ["description", "Made by Ryan Britt"], ["course", 3], ["cost", 97], ["created_at", "2018-04-03 20:33:00.952870"], ["updated_at", "2018-04-03 20:33:00.952870"]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "dishes" ("name", "description", "course", "cost", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Garden Salad"], ["description", "Healthy, delicious, utterly boring"], ["course", 2], ["cost", 9], ["created_at", "2018-04-03 20:33:00.954851"], ["updated_at", "2018-04-03 20:33:00.954851"]]
-  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "dishes" ("name", "description", "course", "cost", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Cobb Salad"], ["description", "This is healthy, right?"], ["course", 2], ["cost", 15], ["created_at", "2018-04-03 20:33:00.956546"], ["updated_at", "2018-04-03 20:33:00.956546"]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "dishes" ("name", "description", "course", "cost", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Calamari"], ["description", "Crunchy and tasty."], ["course", 1], ["cost", 13], ["created_at", "2018-04-03 20:33:00.958465"], ["updated_at", "2018-04-03 20:33:00.958465"]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "dishes" ("name", "description", "course", "cost", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Bruschetta"], ["description", "Give it a shot, it's good, I promise"], ["course", 1], ["cost", 12], ["created_at", "2018-04-03 20:33:00.960405"], ["updated_at", "2018-04-03 20:33:00.960405"]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Garlic"], ["description", "Put it in everything"], ["created_at", "2018-04-03 20:33:00.971177"], ["updated_at", "2018-04-03 20:33:00.971177"]]
-  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Romain Lettuce"], ["description", "How can something so boring taste so delicious?"], ["created_at", "2018-04-03 20:33:00.972857"], ["updated_at", "2018-04-03 20:33:00.972857"]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Squid"], ["description", "What do you think I am? Wikipedia?"], ["created_at", "2018-04-03 20:33:00.974363"], ["updated_at", "2018-04-03 20:33:00.974363"]]
-  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Beef"], ["description", "It's free range, I promise..."], ["created_at", "2018-04-03 20:33:00.975692"], ["updated_at", "2018-04-03 20:33:00.975692"]]
-  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
-  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
->>>>>>> 0869ff4a5c8fad3bcd93491dbf125db5638659ae
   [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
@@ -2820,7 +2766,7 @@ Processing by DishesController#index as HTML
 Completed 500 Internal Server Error in 251ms (ActiveRecord: 20.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x00007f9ac2b155f8>:0x00007f9ac2b54730>):
      9:       <p>Course: <%= dish.course %></p>
     10:       <p>Cost  : <%= dish.cost %>$</p>
@@ -2829,7 +2775,7 @@ ActionView::Template::Error (undefined method `student_path' for #<#<Class:0x000
     13:     </li>
     14:   <% end %>
     15: </ul>
-  
+
 app/views/dishes/index.html.erb:12:in `block in _app_views_dishes_index_html_erb__4007463782726892532_70151334050320'
 app/views/dishes/index.html.erb:4:in `_app_views_dishes_index_html_erb__4007463782726892532_70151334050320'
 Started GET "/dishes" for 127.0.0.1 at 2018-04-03 20:06:37 -0400
@@ -2888,7 +2834,7 @@ Processing by DishesController#edit as HTML
 Completed 500 Internal Server Error in 202ms (ActiveRecord: 0.7ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `dish' for #<#<Class:0x00007f9ac2b155f8>:0x00007f9ac06910d8>
 Did you mean?  @dish):
      5:     <input type="text" name="dish[name]" value="<%= @dish.name %>" />
@@ -2898,7 +2844,7 @@ Did you mean?  @dish):
      9:       <option value="<%= dish.course %>"><%= dish.course %></option>
     10:       <option value="<%= dish.course %>"><%= dish.course %></option>
     11:     </select>
-  
+
 app/views/dishes/edit.html.erb:8:in `_app_views_dishes_edit_html_erb___4092949347717298700_70151314902260'
 Started GET "/dishes/1/edit" for 127.0.0.1 at 2018-04-03 20:12:49 -0400
 Processing by DishesController#edit as HTML
@@ -3222,7 +3168,7 @@ Processing by DishesController#show as HTML
 Completed 500 Internal Server Error in 203ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `dish' for #<#<Class:0x00007f9ac2b155f8>:0x00007f9ac04e77c8>
 Did you mean?  @dish):
     3:   <p><%= @dish.description %></p>
@@ -3231,7 +3177,7 @@ Did you mean?  @dish):
     6:   <%= link_to "Edit this dish?", edit_dish_path(dish.id) %>
     7:   <%= link_to "Delete this dish?", dish_path(dish.id), method: :delete %>
     8: </div>
-  
+
 app/views/dishes/show.html.erb:6:in `_app_views_dishes_show_html_erb___38269791377047475_70151315710460'
 Started GET "/dishes" for 127.0.0.1 at 2018-04-03 20:30:43 -0400
 Processing by DishesController#index as HTML
@@ -3339,9 +3285,9 @@ Completed 200 OK in 43ms (Views: 30.0ms | ActiveRecord: 5.0ms)
 
 
 Started GET "/" for 127.0.0.1 at 2018-04-03 21:03:07 -0400
-  
+
 SyntaxError (/Users/caseyrharding/wdi/PROJECTS/waiter_app_ruby/waiter_app/app/controllers/users_controller.rb:47: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/controllers/users_controller.rb:47: syntax error, unexpected end-of-input, expecting keyword_end
 Started GET "/" for 127.0.0.1 at 2018-04-03 21:03:25 -0400
 Processing by UsersController#show as HTML
@@ -3350,9 +3296,9 @@ Processing by UsersController#show as HTML
 Completed 404 Not Found in 16ms (ActiveRecord: 3.0ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
-  
+
 app/controllers/users_controller.rb:7:in `show'
 Started GET "/" for 127.0.0.1 at 2018-04-03 21:03:39 -0400
 Processing by UsersController#show as HTML
@@ -3361,9 +3307,9 @@ Processing by UsersController#show as HTML
 Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
-  
+
 app/controllers/users_controller.rb:7:in `show'
 Started GET "/" for 127.0.0.1 at 2018-04-03 21:04:35 -0400
 Processing by UsersController#show as HTML
@@ -3372,9 +3318,9 @@ Processing by UsersController#show as HTML
 Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
-  
+
 app/controllers/users_controller.rb:7:in `show'
 Started GET "/" for 127.0.0.1 at 2018-04-03 21:09:24 -0400
 Processing by UsersController#show as HTML
@@ -3382,9 +3328,9 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 148ms (ActiveRecord: 3.5ms)
 
 
-  
+
 NameError (undefined local variable or method `user' for #<UsersController:0x00007f9ac05ad590>):
-  
+
 app/controllers/users_controller.rb:7:in `show'
 Started GET "/" for 127.0.0.1 at 2018-04-03 21:10:03 -0400
 Processing by UsersController#show as HTML
@@ -3393,17 +3339,17 @@ Processing by UsersController#show as HTML
 Completed 404 Not Found in 23ms (ActiveRecord: 3.6ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
-  
+
 app/controllers/users_controller.rb:7:in `show'
 Started GET "/" for 127.0.0.1 at 2018-04-03 21:10:10 -0400
-  
+
 SyntaxError (/Users/caseyrharding/wdi/PROJECTS/waiter_app_ruby/waiter_app/app/controllers/users_controller.rb:7: syntax error, unexpected ']', expecting ')'
 ...er = User.find(current_user.id])
 ...                              ^
 /Users/caseyrharding/wdi/PROJECTS/waiter_app_ruby/waiter_app/app/controllers/users_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/controllers/users_controller.rb:7: syntax error, unexpected ']', expecting ')'
 app/controllers/users_controller.rb:48: syntax error, unexpected end-of-input, expecting keyword_end
 Started GET "/" for 127.0.0.1 at 2018-04-03 21:10:19 -0400
@@ -3415,14 +3361,14 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 245ms (ActiveRecord: 3.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x00007f9ac5069728>:0x00007f9abddf3450>
 Did you mean?  @user):
     1: <h1><%=user[:email]%>:</h1>
     2: <% user.dishes.each do |dish| %>
     3:     <p><%=dish[:name]%></p>
     4: <% end %>
-  
+
 app/views/users/show.html.erb:1:in `_app_views_users_show_html_erb__2254855271518441449_70151353618800'
 Started GET "/" for 127.0.0.1 at 2018-04-03 21:10:53 -0400
 Processing by UsersController#show as HTML
@@ -3665,7 +3611,7 @@ Processing by DishesController#show as HTML
 Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::Template::Error (no implicit conversion of Symbol into Integer):
     3:   <p><%= @dish.description %></p>
     4:   <p>Course: <%= @dish.course %></p>
@@ -3674,7 +3620,7 @@ ActionView::Template::Error (no implicit conversion of Symbol into Integer):
     7:   <% if @dish.ingredients.length > 0 %>
     8:   <h4>Ingredients:</h4>
     9:     <% @dish.ingredients.each do |ing| %>
-  
+
 app/views/dishes/show.html.erb:6:in `_app_views_dishes_show_html_erb___38269791377047475_70151336419040'
 Started GET "/dishes/5" for 127.0.0.1 at 2018-04-03 21:31:31 -0400
 Processing by DishesController#show as HTML
@@ -3697,7 +3643,7 @@ Processing by DishesController#show as HTML
 Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `ingredient' for #<Dish:0x00007f9ac2fe3850>
 Did you mean?  ingredients
                ingredients=
@@ -3709,7 +3655,7 @@ Did you mean?  ingredients
     7:   <% if @dish.ingredients.length > 0 %>
     8:   <h4>Ingredients:</h4>
     9:     <% @dish.ingredients.each do |ing| %>
-  
+
 app/views/dishes/show.html.erb:6:in `_app_views_dishes_show_html_erb___38269791377047475_70151336563160'
 Started GET "/dishes/5" for 127.0.0.1 at 2018-04-03 21:31:49 -0400
 Processing by DishesController#show as HTML
@@ -3803,7 +3749,7 @@ Processing by DishesController#show as HTML
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.1ms)
 
 
-  
+
 ActionView::Template::Error (no implicit conversion of Symbol into Integer):
     3:   <p><%= @dish.description %></p>
     4:   <p>Course: <%= @dish.course %></p>
@@ -3812,7 +3758,7 @@ ActionView::Template::Error (no implicit conversion of Symbol into Integer):
     7:   <% if @ingredients.length > 0 %>
     8:     <h4>Ingredients:</h4>
     9:     <% @ingredients.each do |ing| %>
-  
+
 app/views/dishes/show.html.erb:6:in `_app_views_dishes_show_html_erb___2484692171422931566_70286026900200'
 Started GET "/dishes/5" for 127.0.0.1 at 2018-04-03 21:44:12 -0400
 Processing by DishesController#show as HTML
@@ -3858,7 +3804,7 @@ Processing by DishesController#show as HTML
 Completed 500 Internal Server Error in 53ms (ActiveRecord: 8.7ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for "[]":String):
      6:   <%= @ingredients %>
      7:   <% if @ingredients.length > 0 %>
@@ -3867,7 +3813,7 @@ ActionView::Template::Error (undefined method `each' for "[]":String):
     10:       <p><%= ing.name %></p>
     11:     <% end %>
     12:   <% end %>
-  
+
 app/views/dishes/show.html.erb:9:in `_app_views_dishes_show_html_erb___2484692171422931566_70285973563020'
 Started GET "/dishes/5" for 127.0.0.1 at 2018-04-03 21:46:43 -0400
 Processing by DishesController#show as HTML
@@ -3880,7 +3826,7 @@ Processing by DishesController#show as HTML
 Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for "[]":String):
      6:   <%= @ingredients %>
      7:   <!-- <% if @ingredients.length > 0 %>
@@ -3889,7 +3835,7 @@ ActionView::Template::Error (undefined method `each' for "[]":String):
     10:       <p><%= ing.name %></p>
     11:     <% end %>
     12:   <% end %> -->
-  
+
 app/views/dishes/show.html.erb:9:in `_app_views_dishes_show_html_erb___2484692171422931566_70286027770480'
 Started GET "/dishes/5" for 127.0.0.1 at 2018-04-03 21:46:45 -0400
 Processing by DishesController#show as HTML
@@ -3902,7 +3848,7 @@ Processing by DishesController#show as HTML
 Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for "[]":String):
      6:   <%= @ingredients %>
      7:   <!-- <% if @ingredients.length > 0 %>
@@ -3911,7 +3857,7 @@ ActionView::Template::Error (undefined method `each' for "[]":String):
     10:       <p><%= ing.name %></p>
     11:     <% end %>
     12:   <% end %> -->
-  
+
 app/views/dishes/show.html.erb:9:in `_app_views_dishes_show_html_erb___2484692171422931566_70286053530220'
 Started GET "/dishes/5" for 127.0.0.1 at 2018-04-03 21:46:51 -0400
 Processing by DishesController#show as HTML
@@ -3932,9 +3878,9 @@ Processing by DishesController#show as HTML
 Completed 500 Internal Server Error in 28ms (ActiveRecord: 4.5ms)
 
 
-  
+
 NoMethodError (undefined method `first' for #<Dish:0x00007fd977823978>):
-  
+
 app/controllers/dishes_controller.rb:8:in `show'
 Started GET "/dishes/5" for 127.0.0.1 at 2018-04-03 21:49:52 -0400
 Processing by DishesController#show as HTML
@@ -3947,7 +3893,7 @@ Processing by DishesController#show as HTML
 Completed 500 Internal Server Error in 50ms (ActiveRecord: 8.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `length' for nil:NilClass):
     4:   <p>Course: <%= @dish.course %></p>
     5:   <p>Cost: $<%= @dish.cost %></p>
@@ -3956,7 +3902,7 @@ ActionView::Template::Error (undefined method `length' for nil:NilClass):
     8:     <h4>Ingredients:</h4>
     9:     <% @ingredients.each do |ing| %>
    10:       <p><%= ing.name %></p>
-  
+
 app/views/dishes/show.html.erb:7:in `_app_views_dishes_show_html_erb___2484692171422931566_70285989482840'
 Started GET "/dishes/5" for 127.0.0.1 at 2018-04-03 21:50:00 -0400
 Processing by DishesController#show as HTML
@@ -4012,7 +3958,7 @@ Processing by DishesController#show as HTML
 Completed 500 Internal Server Error in 43ms (ActiveRecord: 5.1ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `length' for nil:NilClass):
     4:   <p>Course: <%= @dish.course %></p>
     5:   <p>Cost: $<%= @dish.cost %></p>
@@ -4021,7 +3967,7 @@ ActionView::Template::Error (undefined method `length' for nil:NilClass):
     8:     <h4>Ingredients:</h4>
     9:     <% @ingredients.each do |ing| %>
    10:       <p><%= ing.name %></p>
-  
+
 app/views/dishes/show.html.erb:7:in `_app_views_dishes_show_html_erb___2484692171422931566_70286045218960'
 Started GET "/dishes/5" for 127.0.0.1 at 2018-04-03 21:57:21 -0400
 Processing by DishesController#show as HTML
@@ -4103,7 +4049,7 @@ Processing by DishesController#show as HTML
 Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.7ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for #<Dish:0x00007fd97b7e3978>):
     3:   <p><%= @dish.description %></p>
     4:   <p>Course: <%= @dish.course %></p>
@@ -4112,7 +4058,7 @@ ActionView::Template::Error (undefined method `each' for #<Dish:0x00007fd97b7e39
     7:   <%= dish.ingredients %>
     8:   <h4>Ingredients:</h4>
     9:   <% dish.ingredients.each do |ing| %>
-  
+
 app/views/dishes/show.html.erb:6:in `_app_views_dishes_show_html_erb___2484692171422931566_70286028247320'
 Started GET "/dishes/5" for 127.0.0.1 at 2018-04-03 22:04:20 -0400
 Processing by DishesController#show as HTML
@@ -4226,11 +4172,11 @@ Completed 200 OK in 68ms (Views: 34.5ms | ActiveRecord: 8.4ms)
 
 
 Started GET "/dishes/2" for 127.0.0.1 at 2018-04-04 06:42:35 -0400
-  
+
 SyntaxError (/Users/ryanbritt/code/wdi/UNIT_04/PROJECTS/waiter_app_ruby/waiter_app/app/controllers/dishes_controller.rb:8: syntax error, unexpected tIVAR, expecting keyword_end
     p "I am here ---> " @dish
                         ^~~~~):
-  
+
 app/controllers/dishes_controller.rb:8: syntax error, unexpected tIVAR, expecting keyword_end
 Started GET "/dishes/2" for 127.0.0.1 at 2018-04-04 06:42:48 -0400
 Processing by DishesController#show as HTML
@@ -4398,12 +4344,12 @@ Processing by IngredientsController#index as HTML
 Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.9ms)
 
 
-  
+
 SyntaxError (/Users/ryanbritt/code/wdi/UNIT_04/PROJECTS/waiter_app_ruby/waiter_app/app/views/ingredients/index.html.erb:4: syntax error, unexpected '<'
 ...ut_buffer.append=( link_to "#{<%= ingredient[:name] );@outpu...
 ...                              ^
 /Users/ryanbritt/code/wdi/UNIT_04/PROJECTS/waiter_app_ruby/waiter_app/app/views/ingredients/index.html.erb:6: syntax error, unexpected keyword_end, expecting tSTRING_DEND
-'.freeze; end 
+'.freeze; end
           ^~~
 /Users/ryanbritt/code/wdi/UNIT_04/PROJECTS/waiter_app_ruby/waiter_app/app/views/ingredients/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting tSTRING_DEND
           ensure
@@ -4411,7 +4357,7 @@ SyntaxError (/Users/ryanbritt/code/wdi/UNIT_04/PROJECTS/waiter_app_ruby/waiter_a
 /Users/ryanbritt/code/wdi/UNIT_04/PROJECTS/waiter_app_ruby/waiter_app/app/views/ingredients/index.html.erb:10: syntax error, unexpected keyword_end, expecting tSTRING_DEND
           end
           ^~~):
-  
+
 app/views/ingredients/index.html.erb:4: syntax error, unexpected '<'
 app/views/ingredients/index.html.erb:6: syntax error, unexpected keyword_end, expecting tSTRING_DEND
 app/views/ingredients/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting tSTRING_DEND
@@ -4588,12 +4534,12 @@ Processing by IngredientsController#create as HTML
 Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.3ms)
 
 
-  
+
 NameError (undefined local variable or method `ingredient_params' for #<IngredientsController:0x00007f93383a3608>
 Did you mean?  ingredient_path
                ingredient_url
                ingredients_path):
-  
+
 app/controllers/ingredients_controller.rb:15:in `create'
 Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 07:41:45 -0400
 Processing by IngredientsController#index as HTML
@@ -4689,12 +4635,12 @@ Processing by IngredientsController#create as HTML
 Completed 500 Internal Server Error in 168ms (ActiveRecord: 0.3ms)
 
 
-  
+
 NameError (undefined local variable or method `ingredient_params' for #<IngredientsController:0x00007f84a40baf38>
 Did you mean?  ingredient_path
                ingredient_url
                ingredients_path):
-  
+
 app/controllers/ingredients_controller.rb:15:in `create'
 Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 07:48:56 -0400
 Processing by IngredientsController#index as HTML
@@ -4886,12 +4832,12 @@ Processing by IngredientsController#create as HTML
 Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.4ms)
 
 
-  
+
 NameError (undefined local variable or method `ingredient_params' for #<IngredientsController:0x00007f849e5f8780>
 Did you mean?  ingredient_path
                ingredient_url
                ingredients_path):
-  
+
 app/controllers/ingredients_controller.rb:17:in `create'
 Started GET "/" for 127.0.0.1 at 2018-04-04 08:05:11 -0400
 Processing by UsersController#show as HTML
@@ -4929,9 +4875,9 @@ Processing by IngredientsController#create as HTML
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
-  
+
 app/controllers/ingredients_controller.rb:17:in `create'
 Started GET "/dishes/2" for 127.0.0.1 at 2018-04-04 08:06:19 -0400
 Processing by DishesController#show as HTML
@@ -5034,9 +4980,9 @@ Processing by IngredientsController#create as HTML
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
-  
+
 app/controllers/ingredients_controller.rb:17:in `create'
 Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 08:13:17 -0400
 Processing by IngredientsController#index as HTML
@@ -5063,12 +5009,12 @@ Processing by IngredientsController#create as HTML
 Completed 500 Internal Server Error in 117ms (ActiveRecord: 0.4ms)
 
 
-  
+
 NameError (undefined local variable or method `ingredient_params' for #<IngredientsController:0x00007f84a3c7dfd8>
 Did you mean?  ingredient_path
                ingredient_url
                ingredients_path):
-  
+
 app/controllers/ingredients_controller.rb:17:in `create'
 Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 08:14:09 -0400
 Processing by IngredientsController#index as HTML
@@ -5095,9 +5041,9 @@ Processing by IngredientsController#create as HTML
 Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
-  
+
 app/controllers/ingredients_controller.rb:17:in `create'
 Started GET "/" for 127.0.0.1 at 2018-04-04 08:15:07 -0400
 Processing by UsersController#show as HTML
@@ -5111,11 +5057,11 @@ Completed 200 OK in 77ms (Views: 53.1ms | ActiveRecord: 5.5ms)
 
 
 Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 08:15:11 -0400
-  
+
 SyntaxError (/Users/ryanbritt/code/wdi/UNIT_04/PROJECTS/waiter_app_ruby/waiter_app/app/controllers/ingredients_controller.rb:17: syntax error, unexpected ':', expecting ']'
 ...redient.new(params[:ingredient:])
 ...                              ^):
-  
+
 app/controllers/ingredients_controller.rb:17: syntax error, unexpected ':', expecting ']'
 Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 08:15:22 -0400
 Processing by IngredientsController#index as HTML
@@ -5142,9 +5088,9 @@ Processing by IngredientsController#create as HTML
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
-  
+
 app/controllers/ingredients_controller.rb:17:in `create'
 Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 08:17:21 -0400
 Processing by IngredientsController#index as HTML
@@ -5170,9 +5116,9 @@ Processing by IngredientsController#create as HTML
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
-  
+
 app/controllers/ingredients_controller.rb:17:in `create'
 Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 08:18:21 -0400
 Processing by IngredientsController#index as HTML
@@ -5198,17 +5144,17 @@ Processing by IngredientsController#create as HTML
 Completed 500 Internal Server Error in 121ms (ActiveRecord: 0.3ms)
 
 
-  
+
 NameError (undefined local variable or method `ingredient_params' for #<IngredientsController:0x00007f84a42a2a58>
 Did you mean?  ingredient_path
                ingredient_url
                ingredients_path):
-  
+
 app/controllers/ingredients_controller.rb:17:in `create'
 Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 08:23:30 -0400
-  
+
 SyntaxError (/Users/ryanbritt/code/wdi/UNIT_04/PROJECTS/waiter_app_ruby/waiter_app/app/controllers/ingredients_controller.rb:41: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/controllers/ingredients_controller.rb:41: syntax error, unexpected end-of-input, expecting keyword_end
 Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 08:23:46 -0400
 Processing by IngredientsController#index as HTML
@@ -5869,9 +5815,9 @@ Completed 200 OK in 39ms (Views: 30.3ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/user/login" for 127.0.0.1 at 2018-04-04 09:04:50 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/user/login"):
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -5900,9 +5846,9 @@ puma (3.11.3) lib/puma/server.rb:438:in `process_client'
 puma (3.11.3) lib/puma/server.rb:302:in `block in run'
 puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/user" for 127.0.0.1 at 2018-04-04 09:04:58 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/user"):
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -5967,9 +5913,9 @@ Processing by IngredientsController#show as HTML
 Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Ingredient with 'id'=users):
-  
+
 app/controllers/ingredients_controller.rb:7:in `show'
 Started GET "/users" for 127.0.0.1 at 2018-04-04 09:06:20 -0400
 Processing by UsersController#index as HTML
@@ -5992,9 +5938,9 @@ Completed 200 OK in 33ms (Views: 28.9ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 11:08:46 -0400
-  
+
 SyntaxError (/Users/ryanbritt/code/wdi/UNIT_04/PROJECTS/waiter_app_ruby/waiter_app/app/controllers/ingredients_controller.rb:55: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/controllers/ingredients_controller.rb:55: syntax error, unexpected end-of-input, expecting keyword_end
 Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 11:09:49 -0400
 Processing by IngredientsController#index as HTML
@@ -6026,9 +5972,9 @@ Completed 200 OK in 41ms (Views: 34.8ms | ActiveRecord: 0.5ms)
 
 
 Started POST "/ingredient/4/edit" for 127.0.0.1 at 2018-04-04 11:09:59 -0400
-  
+
 ActionController::RoutingError (No route matches [POST] "/ingredient/4/edit"):
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -6057,9 +6003,9 @@ puma (3.11.3) lib/puma/server.rb:438:in `process_client'
 puma (3.11.3) lib/puma/server.rb:302:in `block in run'
 puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
 Started GET "/ingredient" for 127.0.0.1 at 2018-04-04 11:11:12 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/ingredient"):
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -6117,9 +6063,9 @@ Completed 200 OK in 35ms (Views: 29.6ms | ActiveRecord: 0.7ms)
 
 
 Started POST "/ingredients/4/edit" for 127.0.0.1 at 2018-04-04 11:11:27 -0400
-  
+
 ActionController::RoutingError (No route matches [POST] "/ingredients/4/edit"):
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -6177,9 +6123,9 @@ Completed 200 OK in 45ms (Views: 38.9ms | ActiveRecord: 0.5ms)
 
 
 Started POST "/ingredients/4" for 127.0.0.1 at 2018-04-04 11:12:17 -0400
-  
+
 ActionController::RoutingError (No route matches [POST] "/ingredients/4"):
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -6237,9 +6183,9 @@ Completed 200 OK in 38ms (Views: 31.2ms | ActiveRecord: 0.6ms)
 
 
 Started POST "/ingredients/5" for 127.0.0.1 at 2018-04-04 11:14:02 -0400
-  
+
 ActionController::RoutingError (No route matches [POST] "/ingredients/5"):
-  
+
 actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -6309,7 +6255,7 @@ Completed 302 Found in 12ms (ActiveRecord: 7.2ms)
 
 
 Started GET "/ingredients.2" for 127.0.0.1 at 2018-04-04 11:14:25 -0400
-Processing by IngredientsController#index as 
+Processing by IngredientsController#index as
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   Rendering ingredients/index.html.erb within layouts/application
   [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
@@ -6350,7 +6296,7 @@ Completed 302 Found in 12ms (ActiveRecord: 7.5ms)
 
 
 Started GET "/ingredients.6" for 127.0.0.1 at 2018-04-04 11:14:37 -0400
-Processing by IngredientsController#index as 
+Processing by IngredientsController#index as
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   Rendering ingredients/index.html.erb within layouts/application
   [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
@@ -6367,5 +6313,3 @@ Processing by IngredientsController#show as HTML
   Rendered ingredients/show.html.erb within layouts/application (0.8ms)
 Completed 200 OK in 37ms (Views: 30.7ms | ActiveRecord: 0.6ms)
 >>>>>>> 44d9a1209dc9b8cbabc1c0efca532ca0fdf21045
-
-
