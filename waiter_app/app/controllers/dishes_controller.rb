@@ -5,7 +5,6 @@ class DishesController < ApplicationController
 
   def show
     @dish = Dish.find(params[:id])
-    # p "I am here ---> " , @dish.ingredients[0]
   end
 
   def new
@@ -30,7 +29,7 @@ class DishesController < ApplicationController
     if @dish.update(dish_params)
       redirect_to dish_path(@dish.id)
     else
-      redirect_to edit_dish_path(@student.id)
+      redirect_to edit_dish_path(@dish.id)
     end
   end
 
