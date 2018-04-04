@@ -1,2 +1,13 @@
-<h1>Dishes#index</h1>
-<p>Find me in app/views/dishes/index.html.erb</p>
+<h1>All Dishes</h1>
+<%= link_to "Create New Dish", new_dish_path %>
+<br>
+<% @dishes.each do |dish| %>
+    <br>
+    <h3><%= dish.name %></h3>
+    <hr>
+    <p><%= dish.description %></p>
+    <p>Course: <%= dish.course %></p>
+    <p>Cost  : <%= dish.cost %>$</p>
+    <%= link_to "Edit this dish?", edit_dish_path(dish.id) %>
+    <%= link_to "Delete this dish?", dish_path(dish.id), method: :delete %>
+<% end %>
