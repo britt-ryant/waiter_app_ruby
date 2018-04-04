@@ -5,7 +5,14 @@
   <p>Cost: $<%= @dish.cost %></p>
   <h4>Ingredients:</h4>
   <% @dish.ingredients.each do |ing| %>
-    <p><%= ing[:name] %></p>
+    <%= link_to "#{ing[:name]}", ingredient_path(ing[:id]) %>
+      <%= form_tag("/user_ingredients", method: "post") do %>
+        <%= hidden_field(:ingredient_id, "", :value=>ing.id )%>
+        <%= hidden_field(:user_id, "", :value=>current_user.id )%>
+        <%= submit_tag( "allergy")%>
+      <% end %>
+      <br>
+      <br>
   <% end %>
   <%= link_to "Edit this dish?", edit_dish_path(@dish.id) %>
   <%= link_to "Delete this dish?", dish_path(@dish.id), method: :delete %>

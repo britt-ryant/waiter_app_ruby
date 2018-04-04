@@ -2,7 +2,11 @@
 <h2>select any ingredient to indicate an allergy</h2>
 <%= link_to "Add an ingredient that's not listed so we can be sure not to include it!", new_ingredient_path %>
 <br><br>
-<% @ingredients.each do |ingredient| %>
-  <p><%= link_to "#{ingredient[:name]}", ingredient_path(ingredient.id) %></p>
-  <%= link_to "Delete this ingredient?", ingredient_path(ingredient.id), method: :delete %>
+<% @ingredients.each do |ing| %>
+  <p><%= link_to "#{ing[:name]}", ingredient_path(ing.id) %></p>
+  <%= form_tag("/user_ingredients", method: "post") do %>
+    <%= hidden_field(:ingredient_id, "", :value=>ing.id )%>
+    <%= hidden_field(:user_id, "", :value=>current_user.id )%>
+    <%= submit_tag( "allergy")%>
+  <% end %>
 <% end %>
