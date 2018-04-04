@@ -1,3 +1,10 @@
 <h1><%= @ingredient[:name] %></h1>
 <p><%=@ingredient[:description] %></p>
+
+<h2>All Dishes that include this ingredient</h2>
+<% @ingredient.dishes.each do |dish| %>
+  <p><%= dish[:name] %></p>
+<% end %>
 <%= link_to "Edit this ingredient", edit_ingredient_path(@ingredient.id) %>
+<%= link_to "Delete this ingredient?", ingredient_path(@ingredient.id), method: :delete %>
+<%= link_to "Back to ingredients", ingredients_path %>

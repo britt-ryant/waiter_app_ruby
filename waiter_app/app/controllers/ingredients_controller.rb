@@ -13,7 +13,7 @@ class IngredientsController < ApplicationController
   end
 
   def create
-    if (params[:dish] == "NONE")
+    if (params[:dish_id] == "NONE")
       @ingredient = Ingredient.new(ingredient_params)
         if @ingredient.save
           redirect_to ingredients_path
@@ -31,7 +31,6 @@ class IngredientsController < ApplicationController
         end
     end
   end
-
   def edit
     @ingredient = Ingredient.find(params[:id])
   end
@@ -39,13 +38,16 @@ class IngredientsController < ApplicationController
   def update
     @ingredient = Ingredient.find(params[:id])
     if @ingredient.update(ingredient_params)
-        redirect_to ingredients_path(@ingredient.id)
+        redirect_to ingredient_path(@ingredient[:id])
     else
-        redirect_to edit_ingredient_path(@ingredient.id)
+        redirect_to edit_ingredient_path(@ingredient[:id])
     end
   end
 
   def destroy
+    @ingredient = Ingredient.find(params[:id])
+    @ingredient.delete
+    redirect_to ingredients_path
   end
 
   private

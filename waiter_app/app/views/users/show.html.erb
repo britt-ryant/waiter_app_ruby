@@ -11,6 +11,7 @@
   <strong>Alergies:</strong>
   <% @user.ingredients.each do |ingredient| %>
     <p><%= ingredient[:name] %></p>
+    <%= link_to "Remove this Allergy", user_ingredient_path(ingredient.id), method: :delete %>
   <% end %>
 <% else %>
   <p>No allergies in your section? That can't be correct...</p>
