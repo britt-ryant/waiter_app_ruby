@@ -29,7 +29,7 @@ class DishesController < ApplicationController
     if @dish.update(dish_params)
       redirect_to dish_path(@dish.id)
     else
-      redirect_to edit_dish_path(@student.id)
+      redirect_to edit_dish_path(@dish.id)
     end
   end
 

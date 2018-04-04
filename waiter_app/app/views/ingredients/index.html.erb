@@ -1,2 +1,7 @@
-<h1>Ingredients#index</h1>
-<p>Find me in app/views/ingredients/index.html.erb</p>
+<h1>List of all the ingredients used in our recipes</h1>
+<h2>select any ingredient to indicate an allergy</h2>
+<%= link_to "Add an ingredient that's not listed so we can be sure not to include it!", new_ingredient_path %>
+<br><br> 
+<% @ingredients.each do |ingredient| %>
+  <p><%= link_to "#{ingredient[:name]}", ingredient_path(ingredient.id) %></p>
+<% end %>
