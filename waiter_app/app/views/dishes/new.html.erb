@@ -1,2 +1,15 @@
-<h1>Dishes#new</h1>
-<p>Find me in app/views/dishes/new.html.erb</p>
+<div class="form">
+  <form method="post" action="/dishes">
+    <input type="text" name="dish[name]" placeholder="What is the name of your dish, punk?" />
+    <input type="text" name="dish[description]" placeholder="How would you describe this dish?" />
+    <select name="dish[course]">
+      <option value=1>1</option>
+      <option value=2>2</option>
+      <option value=3>3</option>
+      <option value=4>4</option>
+    </select>
+    <input type="number" name="dish[cost]" placeholder= 42 />
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+    <input type="submit" value="Create!" />
+  </form>
+</div>

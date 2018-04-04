@@ -1,2 +1,15 @@
-<h1>Dishes#edit</h1>
-<p>Find me in app/views/dishes/edit.html.erb</p>
+<div class="form">
+  <form action="/dishes/<%= @dish.id %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+    <input type="hidden" name="_method" value="PUT" />
+    <input type="text" name="dish[name]" value="<%= @dish.name %>" />
+    <input type="text" name="dish[description]" value="<%= @dish.description %>" />
+    <select name="dish[course]">
+      <option value=1>1</option>
+      <option value=2>2</option>
+      <option value=3>3</option>
+      <option value=4>4</option>
+    </select>
+    <input type="submit" value="Change this dish!" />
+  </form>
+</div>
