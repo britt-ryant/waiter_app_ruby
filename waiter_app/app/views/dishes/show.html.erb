@@ -9,7 +9,7 @@
       <%= form_tag("/user_ingredients", method: "post") do %>
         <%= hidden_field(:ingredient_id, "", :value=>ing.id )%>
         <%= hidden_field(:user_id, "", :value=>current_user.id )%>
-        <%= submit_tag( "allergy")%>
+        <%= submit_tag( "Add Allergy")%>
       <% end %>
       <br>
       <br>

@@ -11435,3 +11435,1287 @@ Processing by DishesController#index as HTML
 Completed 200 OK in 51ms (Views: 45.3ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/dishes" for 127.0.0.1 at 2018-04-04 16:10:32 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 42ms (Views: 36.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:10:33 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 43ms (Views: 36.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ingredients/33" for 127.0.0.1 at 2018-04-04 16:10:39 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering ingredients/show.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "ingredients_dishes" ON "dishes"."id" = "ingredients_dishes"."dish_id" WHERE "ingredients_dishes"."ingredient_id" = $1[0m  [["ingredient_id", 33]]
+  Rendered ingredients/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 43ms (Views: 35.8ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/ingredients/33" for 127.0.0.1 at 2018-04-04 16:10:42 -0400
+Processing by IngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zhLQn+R7Fx97nfm+H8DjP9ERax3eTsWpMhppm5jwEQR8UgSgHEKdwLdj2/AuE6AN4ZBvk8+b7tTkSx6gQVK7SQ==", "id"=>"33"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[35mSQL (6.0ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 33]]
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 9ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:10:42 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 38ms (Views: 33.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ingredients/35" for 127.0.0.1 at 2018-04-04 16:10:44 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering ingredients/show.html.erb within layouts/application
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "ingredients_dishes" ON "dishes"."id" = "ingredients_dishes"."dish_id" WHERE "ingredients_dishes"."ingredient_id" = $1[0m  [["ingredient_id", 35]]
+  Rendered ingredients/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 39ms (Views: 31.8ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/ingredients/35" for 127.0.0.1 at 2018-04-04 16:10:45 -0400
+Processing by IngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UFr31ydd/zhQDK2U7YRNo0IdvP75GOHN4LaTfG7go3niGiPo32R155zyj9rcVw6Rcpy4cOjNyrA25+RHt0IJNA==", "id"=>"35"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[35mSQL (6.2ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 35]]
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 9ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:10:45 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ingredients/32" for 127.0.0.1 at 2018-04-04 16:10:46 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  Rendering ingredients/show.html.erb within layouts/application
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "ingredients_dishes" ON "dishes"."id" = "ingredients_dishes"."dish_id" WHERE "ingredients_dishes"."ingredient_id" = $1[0m  [["ingredient_id", 32]]
+  Rendered ingredients/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 42ms (Views: 36.5ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/ingredients/32" for 127.0.0.1 at 2018-04-04 16:10:48 -0400
+Processing by IngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"evyj0FkTZrGVv71u2YH5yVe3l701P41n0EwXHul5exjIvHfvoSrsbllBnyDoUrr7ZzaTMyTqphoGHWAlMNvRVQ==", "id"=>"32"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35mSQL (6.2ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 32]]
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 9ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:10:48 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 33ms (Views: 28.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ingredients/31" for 127.0.0.1 at 2018-04-04 16:10:49 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering ingredients/show.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "ingredients_dishes" ON "dishes"."id" = "ingredients_dishes"."dish_id" WHERE "ingredients_dishes"."ingredient_id" = $1[0m  [["ingredient_id", 31]]
+  Rendered ingredients/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 34ms (Views: 28.4ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/ingredients/31" for 127.0.0.1 at 2018-04-04 16:10:50 -0400
+Processing by IngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"z0oKTiFrtnnFNwOPwufTVY9r/HD1wOgpBQurErcLmYV9Ct5x2VI8pgnJIcHzNJBnv+r4/uQVw1TTWtwpbqkzyA==", "id"=>"31"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[35mSQL (6.0ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 31]]
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 10ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:10:50 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ingredients/30" for 127.0.0.1 at 2018-04-04 16:10:51 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  Rendering ingredients/show.html.erb within layouts/application
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "ingredients_dishes" ON "dishes"."id" = "ingredients_dishes"."dish_id" WHERE "ingredients_dishes"."ingredient_id" = $1[0m  [["ingredient_id", 30]]
+  Rendered ingredients/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 36ms (Views: 29.9ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/ingredients/30" for 127.0.0.1 at 2018-04-04 16:10:52 -0400
+Processing by IngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"piynLtAWYXAlu3xRbw0aE8RXZrcxODFgYDUZ6cr9Yz4UbHMRKC/rr+lFXh9e3lkh9NZiOSDtGh22ZG7SE1/Jcw==", "id"=>"30"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  [1m[35mSQL (2.2ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 30]]
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:10:52 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 33ms (Views: 27.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ingredients/34" for 127.0.0.1 at 2018-04-04 16:10:54 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering ingredients/show.html.erb within layouts/application
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "ingredients_dishes" ON "dishes"."id" = "ingredients_dishes"."dish_id" WHERE "ingredients_dishes"."ingredient_id" = $1[0m  [["ingredient_id", 34]]
+  Rendered ingredients/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 30.6ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/ingredients/34" for 127.0.0.1 at 2018-04-04 16:10:54 -0400
+Processing by IngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HxpXtch9StLI1pB1+FRQoEdYqFANvCf5d5L8NxT4JFitWoOKMETADQQosjvJhxOSd9ms3hxpDIShw4sMzVqOFQ==", "id"=>"34"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[35mSQL (5.5ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 34]]
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 9ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:10:55 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 35ms (Views: 30.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/user_ingredients" for 127.0.0.1 at 2018-04-04 16:10:59 -0400
+Processing by UserIngredientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"820aWtcevaPXV0fHvj1BCiqWXUGtkRlb+bZFND3jPmhBLc5lLyc3fBupZYmP7gI4GhdZz7xEMiYv5zIP5EGUJQ==", "ingredient_id"=>["29"], "user_id"=>["2"], "commit"=>"allergy"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_ingredients" ("user_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["ingredient_id", 29], ["created_at", "2018-04-04 20:10:59.563411"], ["updated_at", "2018-04-04 20:10:59.563411"]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 19ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:10:59 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 34ms (Views: 29.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ingredients/29" for 127.0.0.1 at 2018-04-04 16:11:01 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering ingredients/show.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "ingredients_dishes" ON "dishes"."id" = "ingredients_dishes"."dish_id" WHERE "ingredients_dishes"."ingredient_id" = $1[0m  [["ingredient_id", 29]]
+  Rendered ingredients/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 28.6ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/ingredients/29" for 127.0.0.1 at 2018-04-04 16:11:03 -0400
+Processing by IngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1qQvJ9kQW7D+Pl6hCFONkTjup9BuQu3Zrlezxk4cwVdk5PsYISnRbzLAfO85gM6jCG+jXn+XxqR4BsT9l75rGg==", "id"=>"29"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  [1m[35mSQL (5.9ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 29]]
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 10ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:11:03 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 41ms (Views: 36.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-04-04 16:11:05 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 38ms (Views: 31.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:11:08 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 39ms (Views: 33.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/user_ingredients" for 127.0.0.1 at 2018-04-04 16:11:09 -0400
+Processing by UserIngredientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"enm0/uNLFAJJjOJosyzFG+SwPBIflbcelmitQXZTkPFF452HeyL5x9IXkTxCIzgodYG7jNptHaIAKCFdsKwmog==", "ingredient_id"=>["26"], "user_id"=>["2"], "commit"=>"allergy"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_ingredients" ("user_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["ingredient_id", 26], ["created_at", "2018-04-04 20:11:09.247425"], ["updated_at", "2018-04-04 20:11:09.247425"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 14ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:11:09 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-04-04 16:11:10 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 37ms (Views: 30.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:11:12 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 45ms (Views: 37.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ingredients/26" for 127.0.0.1 at 2018-04-04 16:11:14 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering ingredients/show.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "ingredients_dishes" ON "dishes"."id" = "ingredients_dishes"."dish_id" WHERE "ingredients_dishes"."ingredient_id" = $1[0m  [["ingredient_id", 26]]
+  Rendered ingredients/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 35ms (Views: 29.0ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/ingredients/26" for 127.0.0.1 at 2018-04-04 16:11:15 -0400
+Processing by IngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9wxBGEHCzCSI5ntHKTKXqF05465vM+VqgIRMOgRs37lFTJUnuftG+0QYWQkY4dSabbjnIH7mzhdW1TsB3c519A==", "id"=>"26"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[35mSQL (5.9ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 26]]
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 10ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:11:15 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 36ms (Views: 30.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-04-04 16:11:17 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 39ms (Views: 32.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:11:24 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 41ms (Views: 34.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2018-04-04 16:11:28 -0400
+Processing by IngredientsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/new.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered ingredients/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 39ms (Views: 33.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/ingredients" for 127.0.0.1 at 2018-04-04 16:11:45 -0400
+Processing by IngredientsController#create as HTML
+  Parameters: {"ingredient"=>{"name"=>"Mussles", "description"=>"shellfish"}, "dish_id"=>"NONE", "authenticity_token"=>"/bvY93ftM4fEyheStMN3X4VVl2Fz2ebfOuc/eIXKs5lP+wzIj9S5WAg0NdyFEDRttdST72IMzaLstkhDXGgZ1A=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mussles"], ["description", "shellfish"], ["created_at", "2018-04-04 20:11:45.007083"], ["updated_at", "2018-04-04 20:11:45.007083"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 11ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:11:45 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2018-04-04 16:11:47 -0400
+Processing by IngredientsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/new.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered ingredients/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 29.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/ingredients" for 127.0.0.1 at 2018-04-04 16:12:06 -0400
+Processing by IngredientsController#create as HTML
+  Parameters: {"ingredient"=>{"name"=>"Tree nuts", "description"=>"nutty, butter"}, "dish_id"=>"NONE", "authenticity_token"=>"yqUlXHgx7PtJ44GEXbHvngOHXCfCzRhc4wwPEdCF+r145fFjgAhmJIUdo8psYqysMwZYqdMYMyE1XXgqCSdQ8A=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Tree nuts"], ["description", "nutty, butter"], ["created_at", "2018-04-04 20:12:06.527544"], ["updated_at", "2018-04-04 20:12:06.527544"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 10ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:12:06 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2018-04-04 16:12:08 -0400
+Processing by IngredientsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/new.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered ingredients/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 36ms (Views: 30.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/ingredients" for 127.0.0.1 at 2018-04-04 16:12:16 -0400
+Processing by IngredientsController#create as HTML
+  Parameters: {"ingredient"=>{"name"=>"pesto", "description"=>"that sucks"}, "dish_id"=>"NONE", "authenticity_token"=>"DphNIuKXGSOsQhVRh0ccSBgSBLLeTWyc1kNFLKSuASG82JkdGq6T/GC8Nx+2lF96KJMAPM+YR+EAEjIXfQyrbA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "pesto"], ["description", "that sucks"], ["created_at", "2018-04-04 20:12:16.420465"], ["updated_at", "2018-04-04 20:12:16.420465"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 11ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:12:16 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 27.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-04-04 16:12:18 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 38ms (Views: 32.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/dishes/8" for 127.0.0.1 at 2018-04-04 16:12:24 -0400
+Processing by DishesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bgWB6j0amMARCHagatwHWntyZps5xKPUpK0+C9y8g6bcRVXVxSMSH932VO5bD0RoS/NiFSgRiKly/EkwBR4p6w==", "id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (6.2ms)[0m  [1m[31mDELETE FROM "dishes" WHERE "dishes"."id" = $1[0m  [["id", 8]]
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 10ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-04-04 16:12:24 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 36ms (Views: 32.0ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/dishes/12" for 127.0.0.1 at 2018-04-04 16:12:27 -0400
+Processing by DishesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"63ii13+zw6k7vS5kVgzY4/S81BynbrZ+vdzAmOFR/MJZOHboh4pJdvdDDCpn35vRxD3Qkra7nQNrjbejOPNWjw==", "id"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (6.3ms)[0m  [1m[31mDELETE FROM "dishes" WHERE "dishes"."id" = $1[0m  [["id", 12]]
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 10ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-04-04 16:12:27 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 35ms (Views: 30.4ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/dishes/11" for 127.0.0.1 at 2018-04-04 16:12:29 -0400
+Processing by DishesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SKaKRzosaWU3Kavt2LadqcGIo/y41obPlDrl5tS5eyj65l54whXjuvvXiaPpZd6b8QmncqkDrbJCa5LdDRvRZQ==", "id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (6.0ms)[0m  [1m[31mDELETE FROM "dishes" WHERE "dishes"."id" = $1[0m  [["id", 11]]
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 9ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-04-04 16:12:29 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 32ms (Views: 27.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/dishes/10" for 127.0.0.1 at 2018-04-04 16:12:30 -0400
+Processing by DishesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GiZMJEIleiHDfy0ZkJLmAS5N2HAEEMvlc6b/4vcXd2qoZpgbuhzw/g+BD1ehQaUzHszc/hXF4Jil94jZLrXdJw==", "id"=>"10"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (5.9ms)[0m  [1m[31mDELETE FROM "dishes" WHERE "dishes"."id" = $1[0m  [["id", 10]]
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 10ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-04-04 16:12:30 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 31.4ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/dishes/9" for 127.0.0.1 at 2018-04-04 16:12:32 -0400
+Processing by DishesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XZzosc4+9VmKq52uIlgszGCUuZX2XYzKxN9ntQTkxsnv3DyONgd/hkZVv+ATi2/+UBW9G+eIp7cSjhCO3UZshA==", "id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (6.0ms)[0m  [1m[31mDELETE FROM "dishes" WHERE "dishes"."id" = $1[0m  [["id", 9]]
+Redirected to http://localhost:3000/dishes
+Completed 302 Found in 11ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-04-04 16:12:32 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 41ms (Views: 36.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-04-04 16:12:39 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 39ms (Views: 33.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:12:40 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 38ms (Views: 32.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ingredients/36" for 127.0.0.1 at 2018-04-04 16:12:43 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering ingredients/show.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "ingredients_dishes" ON "dishes"."id" = "ingredients_dishes"."dish_id" WHERE "ingredients_dishes"."ingredient_id" = $1[0m  [["ingredient_id", 36]]
+  Rendered ingredients/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 30.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ingredients/36/edit" for 127.0.0.1 at 2018-04-04 16:12:46 -0400
+Processing by IngredientsController#edit as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering ingredients/edit.html.erb within layouts/application
+  Rendered ingredients/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 35ms (Views: 29.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-04-04 16:12:53 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 41ms (Views: 35.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dishes/2" for 127.0.0.1 at 2018-04-04 16:12:55 -0400
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_dishes" ON "ingredients"."id" = "ingredients_dishes"."ingredient_id" WHERE "ingredients_dishes"."dish_id" = $1[0m  [["dish_id", 2]]
+  Rendered dishes/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 37ms (Views: 31.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ingredients/1" for 127.0.0.1 at 2018-04-04 16:12:58 -0400
+Processing by IngredientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering ingredients/show.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "ingredients_dishes" ON "dishes"."id" = "ingredients_dishes"."dish_id" WHERE "ingredients_dishes"."ingredient_id" = $1[0m  [["ingredient_id", 1]]
+  Rendered ingredients/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 30.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/ingredients/1" for 127.0.0.1 at 2018-04-04 16:13:00 -0400
+Processing by IngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y/CEq+Qbu37a7useKvs0T42xPZw0rhMrqaQrmuHSn8DRsFCUHCIxoRYQyVAbKHd9vTA5EiV7OFZ/9VyhOHA1jQ==", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (5.9ms)[0m  [1m[31mDELETE FROM "ingredients" WHERE "ingredients"."id" = $1[0m  [["id", 1]]
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 10ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:13:00 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 35ms (Views: 30.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-04-04 16:13:07 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 38ms (Views: 31.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dishes/2" for 127.0.0.1 at 2018-04-04 16:13:09 -0400
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_dishes" ON "ingredients"."id" = "ingredients_dishes"."ingredient_id" WHERE "ingredients_dishes"."dish_id" = $1[0m  [["dish_id", 2]]
+  Rendered dishes/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 33.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dishes/2/edit" for 127.0.0.1 at 2018-04-04 16:13:11 -0400
+Processing by DishesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dishes/edit.html.erb within layouts/application
+  Rendered dishes/edit.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 41ms (Views: 34.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dishes/6" for 127.0.0.1 at 2018-04-04 16:13:17 -0400
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_dishes" ON "ingredients"."id" = "ingredients_dishes"."ingredient_id" WHERE "ingredients_dishes"."dish_id" = $1[0m  [["dish_id", 6]]
+  Rendered dishes/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 36ms (Views: 29.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dishes/5" for 127.0.0.1 at 2018-04-04 16:13:21 -0400
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_dishes" ON "ingredients"."id" = "ingredients_dishes"."ingredient_id" WHERE "ingredients_dishes"."dish_id" = $1[0m  [["dish_id", 5]]
+  Rendered dishes/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 38ms (Views: 31.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dishes/4" for 127.0.0.1 at 2018-04-04 16:13:24 -0400
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_dishes" ON "ingredients"."id" = "ingredients_dishes"."ingredient_id" WHERE "ingredients_dishes"."dish_id" = $1[0m  [["dish_id", 4]]
+  Rendered dishes/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 39ms (Views: 32.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/dishes/3" for 127.0.0.1 at 2018-04-04 16:13:28 -0400
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_dishes" ON "ingredients"."id" = "ingredients_dishes"."ingredient_id" WHERE "ingredients_dishes"."dish_id" = $1[0m  [["dish_id", 3]]
+  Rendered dishes/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 37ms (Views: 30.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dishes/2" for 127.0.0.1 at 2018-04-04 16:13:31 -0400
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_dishes" ON "ingredients"."id" = "ingredients_dishes"."ingredient_id" WHERE "ingredients_dishes"."dish_id" = $1[0m  [["dish_id", 2]]
+  Rendered dishes/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 42ms (Views: 35.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:13:40 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 42ms (Views: 35.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2018-04-04 16:13:42 -0400
+Processing by IngredientsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/new.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered ingredients/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 37ms (Views: 31.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/ingredients" for 127.0.0.1 at 2018-04-04 16:13:56 -0400
+Processing by IngredientsController#create as HTML
+  Parameters: {"ingredient"=>{"name"=>"Octopus", "description"=>"8 legs"}, "dish_id"=>"4", "authenticity_token"=>"RUdwP3Sivpr+XBWjcK4Zz8/9fsEYZ0qe2xOsFI4LS2f3B6QAjJs0RTKiN+1BfVr9/3x6TwmyYeMNQtsvV6nhKg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ingredients" ("name", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Octopus"], ["description", "8 legs"], ["created_at", "2018-04-04 20:13:56.754712"], ["updated_at", "2018-04-04 20:13:56.754712"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ingredients_dishes" ("ingredient_id", "dish_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ingredient_id", 39], ["dish_id", 4], ["created_at", "2018-04-04 20:13:56.772279"], ["updated_at", "2018-04-04 20:13:56.772279"]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 27ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:13:56 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dishes" for 127.0.0.1 at 2018-04-04 16:13:59 -0400
+Processing by DishesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering dishes/index.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes"[0m
+  Rendered dishes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 38ms (Views: 32.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dishes/4" for 127.0.0.1 at 2018-04-04 16:14:01 -0400
+Processing by DishesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT  "dishes".* FROM "dishes" WHERE "dishes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering dishes/show.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "ingredients_dishes" ON "ingredients"."id" = "ingredients_dishes"."ingredient_id" WHERE "ingredients_dishes"."dish_id" = $1[0m  [["dish_id", 4]]
+  Rendered dishes/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 40ms (Views: 34.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/user_ingredients" for 127.0.0.1 at 2018-04-04 16:14:04 -0400
+Processing by UserIngredientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gQ6mc+t5ZnBfIiJjMQeZ2PIKbXQRQHv/XHeLYhF/hG6+lI8KcxCLtcS5UTfACGTrYzvq6tS40UPKNwd+14AyPQ==", "ingredient_id"=>["39"], "user_id"=>["2"], "commit"=>"allergy"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "user_ingredients" ("user_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["ingredient_id", 39], ["created_at", "2018-04-04 20:14:04.338779"], ["updated_at", "2018-04-04 20:14:04.338779"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/ingredients
+Completed 302 Found in 13ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:14:04 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 34ms (Views: 30.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-04-04 16:14:06 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 40ms (Views: 33.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:14:18 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 42ms (Views: 35.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-04-04 16:16:27 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (198.9ms)
+Completed 500 Internal Server Error in 214ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `ing' for #<#<Class:0x00007fcc738682f0>:0x00007fcc73a29008>
+Did you mean?  in?):
+    12:   <% @user.ingredients.each do |ingredient| %>
+    13:     <p><%= ingredient[:name] %></p>
+    14:     <%= form_tag("/user_ingredients", method: "Delete") do %>
+    15:       <%= hidden_field(:ingredient_id, "", :value=>ing.id )%>
+    16:       <%= hidden_field(:user_id, "", :value=>current_user.id )%>
+    17:       <%= submit_tag( "Remove Allergy")%>
+    18:     <% end %>
+  
+app/views/users/show.html.erb:15:in `block (2 levels) in _app_views_users_show_html_erb___3690269162666051785_70258045046320'
+app/views/users/show.html.erb:14:in `block in _app_views_users_show_html_erb___3690269162666051785_70258045046320'
+app/views/users/show.html.erb:12:in `_app_views_users_show_html_erb___3690269162666051785_70258045046320'
+Started GET "/users/2" for 127.0.0.1 at 2018-04-04 16:16:47 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 42ms (Views: 36.4ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/user_ingredients" for 127.0.0.1 at 2018-04-04 16:16:49 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/user_ingredients"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 127.0.0.1 at 2018-04-04 16:20:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-04-04 16:20:39 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 58ms (Views: 37.7ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/user_ingredients/39" for 127.0.0.1 at 2018-04-04 16:20:41 -0400
+Processing by UserIngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Z8hyuBGp60z4LZDjUYjt1yegyBUlOSn2Q/b58tj4CmHViKaH6ZBhkzTTsq1gW67lFyHMmzTsAouVp47JAVqgLA==", "id"=>"39"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+No template found for UserIngredientsController#destroy, rendering head :no_content
+Completed 204 No Content in 109976ms (ActiveRecord: 0.5ms)
+
+
+Started DELETE "/user_ingredients/39" for 127.0.0.1 at 2018-04-04 16:22:33 -0400
+Processing by UserIngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Z8hyuBGp60z4LZDjUYjt1yegyBUlOSn2Q/b58tj4CmHViKaH6ZBhkzTTsq1gW67lFyHMmzTsAouVp47JAVqgLA==", "id"=>"39"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+No template found for UserIngredientsController#destroy, rendering head :no_content
+Completed 204 No Content in 881715ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 16:37:17 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 107ms (Views: 71.0ms | ActiveRecord: 10.3ms)
+
+
+Started DELETE "/user_ingredients/39" for 127.0.0.1 at 2018-04-04 16:37:19 -0400
+Processing by UserIngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h2LVxyiTyglgw6RlFjojiKoKsX9qQ8bInIrXdvahr5I1IgH40KpA1qw9hisn6WC6mou18XuW7bVK26BNLwMF3w==", "id"=>"39"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserIngredient Load (0.2ms)[0m  [1m[34mSELECT  "user_ingredients".* FROM "user_ingredients" WHERE "user_ingredients"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 2.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find UserIngredient with 'id'={:user_id=>"39", :ingredient_id=>2}):
+  
+app/controllers/user_ingredients_controller.rb:15:in `destroy'
+Started DELETE "/user_ingredients/39" for 127.0.0.1 at 2018-04-04 16:39:05 -0400
+Processing by UserIngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h2LVxyiTyglgw6RlFjojiKoKsX9qQ8bInIrXdvahr5I1IgH40KpA1qw9hisn6WC6mou18XuW7bVK26BNLwMF3w==", "id"=>"39"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserIngredient Load (0.2ms)[0m  [1m[34mSELECT  "user_ingredients".* FROM "user_ingredients" WHERE "user_ingredients"."user_id" = $1 AND "user_ingredients"."ingredient_id" = $2 LIMIT $3[0m  [["user_id", 39], ["ingredient_id", 2], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-04-04 16:39:21 -0400
+No template found for UserIngredientsController#destroy, rendering head :no_content
+Completed 204 No Content in 19616ms (ActiveRecord: 5.0ms)
+
+
+Started DELETE "/user_ingredients/39" for 127.0.0.1 at 2018-04-04 16:39:25 -0400
+Processing by UserIngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h2LVxyiTyglgw6RlFjojiKoKsX9qQ8bInIrXdvahr5I1IgH40KpA1qw9hisn6WC6mou18XuW7bVK26BNLwMF3w==", "id"=>"39"}
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserIngredient Load (0.2ms)[0m  [1m[34mSELECT  "user_ingredients".* FROM "user_ingredients" WHERE "user_ingredients"."user_id" = $1 AND "user_ingredients"."ingredient_id" = $2 LIMIT $3[0m  [["user_id", 39], ["ingredient_id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+No template found for UserIngredientsController#destroy, rendering head :no_content
+Completed 204 No Content in 57908ms (ActiveRecord: 3.6ms)
+
+
+Started DELETE "/user_ingredients/39" for 127.0.0.1 at 2018-04-04 16:40:23 -0400
+Processing by UserIngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h2LVxyiTyglgw6RlFjojiKoKsX9qQ8bInIrXdvahr5I1IgH40KpA1qw9hisn6WC6mou18XuW7bVK26BNLwMF3w==", "id"=>"39"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserIngredient Load (1.0ms)[0m  [1m[34mSELECT  "user_ingredients".* FROM "user_ingredients" WHERE "user_ingredients"."user_id" = $1 AND "user_ingredients"."ingredient_id" = $2 LIMIT $3[0m  [["user_id", 39], ["ingredient_id", 2], ["LIMIT", 1]]
+  [1m[36mDish Load (0.5ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+No template found for UserIngredientsController#destroy, rendering head :no_content
+Completed 204 No Content in 3556ms (ActiveRecord: 4.2ms)
+
+
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (61436.8ms)
+Completed 200 OK in 61498ms (Views: 61448.0ms | ActiveRecord: 28.6ms)
+
+
+Started DELETE "/user_ingredients/39" for 127.0.0.1 at 2018-04-04 16:40:29 -0400
+Processing by UserIngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h2LVxyiTyglgw6RlFjojiKoKsX9qQ8bInIrXdvahr5I1IgH40KpA1qw9hisn6WC6mou18XuW7bVK26BNLwMF3w==", "id"=>"39"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserIngredient Load (0.4ms)[0m  [1m[34mSELECT  "user_ingredients".* FROM "user_ingredients" WHERE "user_ingredients"."user_id" = $1 AND "user_ingredients"."ingredient_id" = $2 LIMIT $3[0m  [["user_id", 39], ["ingredient_id", 2], ["LIMIT", 1]]
+No template found for UserIngredientsController#destroy, rendering head :no_content
+Completed 204 No Content in 97456ms (ActiveRecord: 0.9ms)
+
+
+Started DELETE "/user_ingredients/39" for 127.0.0.1 at 2018-04-04 16:42:09 -0400
+Processing by UserIngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h2LVxyiTyglgw6RlFjojiKoKsX9qQ8bInIrXdvahr5I1IgH40KpA1qw9hisn6WC6mou18XuW7bVK26BNLwMF3w==", "id"=>"39"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserIngredient Load (0.3ms)[0m  [1m[34mSELECT  "user_ingredients".* FROM "user_ingredients" WHERE "user_ingredients"."user_id" = $1 AND "user_ingredients"."ingredient_id" = $2 LIMIT $3[0m  [["user_id", 2], ["ingredient_id", 39], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-04-04 16:42:40 -0400
+No template found for UserIngredientsController#destroy, rendering head :no_content
+Completed 204 No Content in 34638ms (ActiveRecord: 1.6ms)
+
+
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 83ms (Views: 60.5ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 16:42:46 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.5ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 39ms (Views: 33.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-04-04 16:43:21 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.1ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 85ms (Views: 56.3ms | ActiveRecord: 10.6ms)
+
+
+Started DELETE "/user_ingredients/39" for 127.0.0.1 at 2018-04-04 16:43:22 -0400
+Processing by UserIngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"HEYnpRbfcKBou7fkafr0vrJxJ+tkf65TGP1WcnGf4aCuBvOa7ub6f6RFlapYKbeMgvAjZXWqhS7OrCFJqD1L7Q==", "id"=>"39"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserIngredient Load (0.4ms)[0m  [1m[34mSELECT  "user_ingredients".* FROM "user_ingredients" WHERE "user_ingredients"."user_id" = $1 AND "user_ingredients"."ingredient_id" = $2 LIMIT $3[0m  [["user_id", 2], ["ingredient_id", 39], ["LIMIT", 1]]
+  [1m[35mSQL (6.1ms)[0m  [1m[31mDELETE FROM "user_ingredients" WHERE "user_ingredients"."id" = $1[0m  [["id", 12]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 19ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-04-04 16:43:22 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 45ms (Views: 39.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-04-04 16:43:25 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.4ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 38ms (Views: 31.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:43:43 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 59ms (Views: 30.8ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/user_ingredients" for 127.0.0.1 at 2018-04-04 16:43:45 -0400
+Processing by UserIngredientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VZFTaZr2DWeKzFUE+CsRIeFYxiKKTzKt3dZI7FtCz9FqC3oQAp/gohFXJlAJJOwScGlBvE+3mBFLlsTwnb15gg==", "ingredient_id"=>["3"], "user_id"=>["2"], "commit"=>"Add Allergy"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_ingredients" ("user_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["ingredient_id", 3], ["created_at", "2018-04-04 20:43:45.061133"], ["updated_at", "2018-04-04 20:43:45.061133"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 8.3ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users"}, missing required keys: [:id]):
+  
+app/controllers/user_ingredients_controller.rb:6:in `create'
+Started GET "/" for 127.0.0.1 at 2018-04-04 16:44:19 -0400
+Processing by UsersController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 77ms (Views: 49.9ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:44:21 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 38ms (Views: 32.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/user_ingredients" for 127.0.0.1 at 2018-04-04 16:44:22 -0400
+Processing by UserIngredientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oKXl8UIK6+d1idj1t6PeuJS6ljsgVw1ojuXVXkHyryGfP8yI2mMGIu4Sq6FGrCOLBYsRpeWvp9QYpVlChw0Zcg==", "ingredient_id"=>["38"], "user_id"=>["2"], "commit"=>"Add Allergy"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.1ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_ingredients" ("user_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["ingredient_id", 38], ["created_at", "2018-04-04 20:44:22.493723"], ["updated_at", "2018-04-04 20:44:22.493723"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 30ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-04-04 16:44:22 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 37ms (Views: 31.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:44:23 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 40ms (Views: 34.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/user_ingredients" for 127.0.0.1 at 2018-04-04 16:44:25 -0400
+Processing by UserIngredientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XvmNPG+wmTq2Rx3Lr/F/LnwYGt8xcbrPPFhJ1PXaJfZhY6RF99l0/y3cbp9e/oId7SmdQfSJEHOqGMXIMyWTpQ==", "ingredient_id"=>["39"], "user_id"=>["2"], "commit"=>"Add Allergy"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_ingredients" ("user_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["ingredient_id", 39], ["created_at", "2018-04-04 20:44:25.129578"], ["updated_at", "2018-04-04 20:44:25.129578"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 14ms (ActiveRecord: 7.9ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-04-04 16:44:25 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 36ms (Views: 30.8ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/user_ingredients/39" for 127.0.0.1 at 2018-04-04 16:44:29 -0400
+Processing by UserIngredientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xXm9eSxuZMDK4sU+2gYQLAPOpxzcon7wqzFL27lBdpZ3OWlG1FfuHwYc53Dr1VMeM0+jks13VY19YDzgYOPc2w==", "id"=>"39"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserIngredient Load (0.3ms)[0m  [1m[34mSELECT  "user_ingredients".* FROM "user_ingredients" WHERE "user_ingredients"."user_id" = $1 AND "user_ingredients"."ingredient_id" = $2 LIMIT $3[0m  [["user_id", 2], ["ingredient_id", 39], ["LIMIT", 1]]
+  [1m[35mSQL (5.9ms)[0m  [1m[31mDELETE FROM "user_ingredients" WHERE "user_ingredients"."id" = $1[0m  [["id", 15]]
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 11ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-04-04 16:44:29 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.2ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 42ms (Views: 36.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ingredients" for 127.0.0.1 at 2018-04-04 16:44:30 -0400
+Processing by IngredientsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering ingredients/index.html.erb within layouts/application
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  Rendered ingredients/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 36ms (Views: 30.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/user_ingredients" for 127.0.0.1 at 2018-04-04 16:44:35 -0400
+Processing by UserIngredientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5JxRTrzMvZXL1RCC/N6dD5rhpS27FB3nodvbqZMI/lLbBng3JKVQUFBOY9YN0WA8C9Ais37st1s3m1e1VfdIAQ==", "ingredient_id"=>["27"], "user_id"=>["2"], "commit"=>"Add Allergy"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT  "ingredients".* FROM "ingredients" WHERE "ingredients"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_ingredients" ("user_id", "ingredient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["ingredient_id", 27], ["created_at", "2018-04-04 20:44:36.000345"], ["updated_at", "2018-04-04 20:44:36.000345"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 14ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2018-04-04 16:44:36 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mDish Load (0.3ms)[0m  [1m[34mSELECT "dishes".* FROM "dishes" INNER JOIN "user_dishes" ON "dishes"."id" = "user_dishes"."dish_id" WHERE "user_dishes"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mIngredient Load (0.3ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "user_ingredients" ON "ingredients"."id" = "user_ingredients"."ingredient_id" WHERE "user_ingredients"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 36ms (Views: 30.6ms | ActiveRecord: 1.1ms)
+
+
