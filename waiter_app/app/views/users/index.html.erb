@@ -2,6 +2,8 @@
   <p><%=user[:email]%>:</p>
   <% user.dishes.each do |dish| %>
       <p><%=dish[:name]%></p>
+      <%= link_to "Delete dish from your order?", user_dish_path(dish.id), method: :delete %><br>
+
   <% end %>
   <strong>Alergies:</strong>
   <% user.ingredients.each do |ingredient| %>

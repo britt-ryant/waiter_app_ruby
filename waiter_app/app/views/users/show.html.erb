@@ -3,6 +3,7 @@
 <% if @user.dishes.length > 0 %>
   <% @user.dishes.each do |dish| %>
       <p><%= dish[:name] %></p>
+      <%= link_to "Delete this dish from your order?", user_dish_path(dish.id), method: :delete %><br>
   <% end %>
 <% else %>
   <p>You have no orders, get servin!</p>
