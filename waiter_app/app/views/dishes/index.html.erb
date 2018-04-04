@@ -8,6 +8,11 @@
     <p><%= dish.description %></p>
     <p>Course: <%= dish.course %></p>
     <p>Cost  :$<%= dish.cost %></p>
+    <%= form_tag("/user_dishes", method: "post") do %>
+      <%= hidden_field(:dish_id, "", :value=>dish.id )%>
+      <%= hidden_field(:user_id, "", :value=>current_user.id )%>
+      <%= submit_tag( "Add Dish")%>
+    <% end %>
     <%= link_to "Edit this dish?", edit_dish_path(dish.id) %>
     <%= link_to "Delete this dish?", dish_path(dish.id), method: :delete %>
     <hr>

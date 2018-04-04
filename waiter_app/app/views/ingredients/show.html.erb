@@ -3,7 +3,7 @@
 
 <h2>All Dishes that include this ingredient</h2>
 <% @ingredient.dishes.each do |dish| %>
-  <p><%= dish[:name] %></p>
+  <%= link_to "#{dish[:name]}", dish_path(dish[:id]) %><br><br>
 <% end %>
 <%= link_to "Edit this ingredient", edit_ingredient_path(@ingredient.id) %>
 <%= link_to "Delete this ingredient?", ingredient_path(@ingredient.id), method: :delete %>
