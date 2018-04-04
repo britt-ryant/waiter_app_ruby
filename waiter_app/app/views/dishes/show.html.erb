@@ -3,7 +3,6 @@
   <p><%= @dish.description %></p>
   <p>Course: <%= @dish.course %></p>
   <p>Cost: $<%= @dish.cost %></p>
-  <%= @dish.ingredients %>
   <h4>Ingredients:</h4>
   <% @dish.ingredients.each do |ing| %>
     <p><%= ing[:name] %></p>

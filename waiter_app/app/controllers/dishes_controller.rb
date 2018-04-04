@@ -5,6 +5,7 @@ class DishesController < ApplicationController
 
   def show
     @dish = Dish.find(params[:id])
+    # p "I am here ---> " , @dish.ingredients[0]
   end
 
   def new
