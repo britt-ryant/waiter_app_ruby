@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> b2342814f930729208404e2dd913f465499e4dc8
   devise_for :users
+
   root to: "users#show"
   resources :users
   resources :dishes

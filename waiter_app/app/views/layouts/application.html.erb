@@ -3,7 +3,7 @@
   <head>
     <title>WaiterApp</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://fonts.googleapis.com/icon?family=Material\Icons" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -11,24 +11,32 @@
   <body>
     <% if notice %>
      <p class="alert alert-success"><%= notice %></p>
-   <% end %>
-   <% if alert %>
-     <p class="alert alert-success"><%= alert %></p>
-    <%end %>
+     <% end %>
+     <% if alert %>
+       <p class="alert alert-success"><%= alert %></p>
+      <%end %>
 
-    <p class="navbar-text pull-right">
-    <% if user_signed_in? %>
-    <pry>
-      Logged in as <strong><%= link_to " #{current_user.email}", user_path(current_user.id) %></strong>.
-      <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> |
-    <% else %>
-      <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-      <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> |
-    <% end %>
-    <%= link_to "Dishes", dishes_path %> |
-    <%= link_to "Ingredients", ingredients_path %>
-    </p>
-    <%= yield %>
+      <nav>
+      <% if user_signed_in? %>
+      <pry>
+
+        Logged in as <strong><%= link_to " #{current_user.email}", user_path(current_user.id) %></strong>.
+        <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> |
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+        <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> |
+      <% end %>
+      <%= link_to "Dishes", dishes_path %> |
+      <%= link_to "Ingredients", ingredients_path %>
+    </nav>
+    <main>
+    <div class="container">
+      <%= yield %>
+    </div>
+    </main>
+    <footer>
+      <p>Made with 🍎 by Ryan and Casey</p>
+    </footer>
   </body>
 </html>

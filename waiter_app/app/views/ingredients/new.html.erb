@@ -1,15 +1,17 @@
-<h1>Add a new Ingredient to our list so that we dont include it!</h1>
-<div class='form'>
-  <form method="post" action="/ingredients">
-    <input type="text" name="ingredient[name]" placeholder="What is the name of the ingredient?" />
-    <input type="text" name="ingredient[description]" placeholder="please give a description so we can be sure to watch out for anything like it!" />
-    <select name="dish_id">
-      <option value=NONE>None</option>
-      <% @dishes.each do |dish| %>
-      <option value=<%=dish[:id]%>><%=dish[:name]%></option>
-      <% end %>
-    </select>
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
-    <input type="submit" value="Add Ingredient!" />
-  </form>
+<div class="ingredient-add-container"
+  <h1>Add a new Ingredient to our list so that we dont include it!</h1>
+  <div class='form'>
+    <form method="post" action="/ingredients">
+      <input type="text" name="ingredient[name]" placeholder="What is the name of the ingredient?" />
+      <input type="text" name="ingredient[description]" placeholder="please give a description so we can be sure to watch out for anything like it!" />
+      <select name="dish_id">
+        <option value=NONE>None</option>
+        <% @dishes.each do |dish| %>
+        <option value=<%=dish[:id]%>><%=dish[:name]%></option>
+        <% end %>
+      </select>
+      <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+      <input type="submit" value="Add Ingredient!" />
+    </form>
+  </div>
 </div>
