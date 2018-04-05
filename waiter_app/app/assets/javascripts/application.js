@@ -19,3 +19,7 @@
 //= require turbolinks
 //= require materialize-sprockets
 //= require materialize/extras/nouislider
+$(document).on('turbolinks:load', () => {
+  console.log("let's get it")
+  $('select').css({display: "block"})
+})
