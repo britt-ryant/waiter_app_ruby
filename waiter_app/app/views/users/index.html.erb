@@ -1,28 +1,28 @@
-<% if current_user.auth == 2 %>
-  <% @users.each do |user| %>
-    <p><%=user[:email]%>:</p>
-    <% user.dishes.each do |dish| %>
-        <p><%=dish[:name]%></p>
-        <%= link_to "Delete dish from your order?", user_dish_path(dish.id), method: :delete %><br>
+<div class="user-index-container">
+  <% if current_user.auth == 2 %>
+    <% @users.each do |user| %>
+      <p><%=user[:email]%>:</p>
+      <h1>---------------------------------------------------------------</h1>
+      <%= button_to "Delete this order", user_path(user[:id]), method: :delete %>
+      <h1>---------------------------------------------------------------</h1>
+      <% user.dishes.each do |dish| %>
+          <p><%=dish[:name]%></p>
+          <%= button_to "Delete dish from your order?", user_dish_path(dish.id), method: :delete %><br>
 
+      <% end %>
+      <strong>Alergies:</strong>
+      <% user.ingredients.each do |ingredient| %>
+        <p><%=ingredient[:name]%></p>
+      <% end %>
+    <% end %>
+  <% else %>
+    <% current_user.dishes.each do |dish| %>
+        <p><%=dish[:name]%></p>
+        <%= button_to "Delete dish from your order?", user_dish_path(dish.id), method: :delete %><br>
     <% end %>
     <strong>Alergies:</strong>
-    <% user.ingredients.each do |ingredient| %>
+    <% current_user.ingredients.each do |ingredient| %>
       <p><%=ingredient[:name]%></p>
     <% end %>
   <% end %>
-<% else %>
-  <p><%=user[:email]%>:</p>
-  <h1>---------------------------------------------------------------</h1>
-  <%= link_to "Delete this order", user_path(user[:id]), method: :delete %>
-  <h1>---------------------------------------------------------------</h1>
-  <% user.dishes.each do |dish| %>
-      <p><%=dish[:name]%></p>
-      <%= link_to "Delete dish from your order?", user_dish_path(dish.id), method: :delete %><br>
-
-  <% end %>
-  <strong>Alergies:</strong>
-  <% user.ingredients.each do |ingredient| %>
-    <p><%=ingredient[:name]%></p>
-  <% end %>
-<% end %>
+</div>
