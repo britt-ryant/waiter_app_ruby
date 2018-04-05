@@ -12,6 +12,11 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.new
   end
 
+  def add_to_ingredients_dishes
+    p "I was able to hit the method!!!!"
+    binding.pry
+  end
+
   def create
     if (params[:dish_id] == "NONE")
       @ingredient = Ingredient.new(ingredient_params)

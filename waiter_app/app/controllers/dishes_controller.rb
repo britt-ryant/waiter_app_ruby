@@ -38,10 +38,7 @@ class DishesController < ApplicationController
     @dish.delete
     redirect_to dishes_path
   end
-  def add_to_order
-    p "Made it here!!!!"
-    binding.pry
-  end
+
 
   private
 
