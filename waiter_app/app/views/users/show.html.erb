@@ -7,9 +7,9 @@
   <% end %>
 <% else %>
   <% if current_user.auth == 2 %>
-    <p><%= @user.email %> doesn't have any current orders.</p>
+    <p><%= @user.email %> haven't ordered anything yet.</p>
   <% else %>
-    <p>You have no orders, get servin!</p>
+    <p>You haven't ordered yet?</p>
   <% end %>
 <% end %>
 <% if @user.ingredients.length > 0 %>
@@ -20,8 +20,8 @@
   <% end %>
 <% else %>
   <% if current_user.auth == 2 %>
-    <p><%= @user.email %> doesn't have any allergies in their section.</p>
+    <p><%= @user.email %> doesn't have any allergies at their table.</p>
   <% else %>
-    <p>No allergies in your section? That can't be correct...</p>
+    <p>No allergies at your table? That can't be correct...</p>
   <% end %>
 <% end %>

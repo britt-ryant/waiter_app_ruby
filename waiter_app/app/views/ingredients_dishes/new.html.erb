@@ -1,13 +1,11 @@
-
-<h1>Please Select which Dish to add this to</h1>
+<h4>Please Select which Dish to add this to</h4>
 <form method="post" action="/ingredients_dishes">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
   <input type="hidden" name="ingredient_id" value="<%=@current_ingredient_id%>"/>
   <select name="dish_id">
-    <option value=NONE>None</option>
     <% @dishes.each do |dish| %>
-    <option value=<%=dish[:id]%>><%=dish[:name]%></option>
+      <option value=<%=dish[:id]%>><%=dish[:name]%></option>
     <% end %>
   </select>
-  <input type="submit" value="Add it to the ingredient!" />
+  <input type="submit" value="Add it to the dish!" />
 </form>
