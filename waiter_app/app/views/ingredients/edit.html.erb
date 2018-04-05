@@ -1,8 +1,10 @@
-<h1>Edit this ingredient</h1>
-<form action="/ingredients/<%= @ingredient.id %>" method="POST">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
-  <input type="hidden" name="_method" value="PUT" />
-  <input type="text" name="ingredient[name]" value="<%= @ingredient.name %>" />
-  <input type="text" name="ingredient[description]" value="<%= @ingredient.description%>" />
-  <input type="submit" value="Chang this ingredient!" />
-</form>
+<div class="edit-ingredient-container">
+  <h1>Edit this ingredient</h1>
+  <form action="/ingredients/<%= @ingredient.id %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+    <input type="hidden" name="_method" value="PUT" />
+    <input type="text" name="ingredient[name]" value="<%= @ingredient.name %>" />
+    <input type="text" name="ingredient[description]" value="<%= @ingredient.description%>" />
+    <input type="submit" value="Chang this ingredient!" />
+  </form>
+</div>
