@@ -1,5 +1,8 @@
 <% @users.each do |user| %>
   <p><%=user[:email]%>:</p>
+  <h1>---------------------------------------------------------------</h1>
+  <%= link_to "Delete this order", user_path(user[:id]), method: :delete %>
+  <h1>---------------------------------------------------------------</h1>
   <% user.dishes.each do |dish| %>
       <p><%=dish[:name]%></p>
       <%= link_to "Delete dish from your order?", user_dish_path(dish.id), method: :delete %><br>

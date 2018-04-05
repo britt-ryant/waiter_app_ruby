@@ -34,9 +34,14 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    binding.pry
     @user = User.find(params[:id])
     @user.delete
     redirect_to users_path
+
+    #So can we just have a link_to like I do on the users route but have ^^^^^^
+    #hit all of the delete routes???? Seems pretty easy to me but I want to talk
+    #to you about how this may affect devise?
   end
 
   private
