@@ -2,7 +2,7 @@
 <%= link_to "Add some dishes!", dishes_path %>
 <% if @user.dishes.length > 0 %>
   <% @user.dishes.each do |dish| %>
-      <p><%= dish[:name] %></p>
+      <p><%= link_to "#{dish[:name]}", dish_path(dish.id) %></p>
       <%= link_to "Delete this dish from your order?", user_dish_path(dish.id), method: :delete %><br>
   <% end %>
 <% else %>
