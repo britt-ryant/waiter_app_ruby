@@ -1,10 +1,10 @@
-<div class="ingredient-list-container">
+
   <h1>List of all the ingredients used in our recipes</h1>
   <h2>select any ingredient to indicate an allergy</h2>
   <%= button_to "Add an ingredient that's not listed so we can be sure not to include it!", new_ingredient_path %>
   <br><br>
   <% @ingredients.each do |ing| %>
-    <p><%= button_to "#{ing[:name]}", ingredient_path(ing.id) %></p>
+    <p><%= link_to "#{ing[:name]}", ingredient_path(ing.id) %></p>
     <p><%= button_to "Add to dish",
                     :controller=> "ingredients_dishes",
                     :action=> "new",
@@ -15,4 +15,3 @@
       <%= submit_tag( "Add Allergy")%>
     <% end %>
   <% end %>
-</div>

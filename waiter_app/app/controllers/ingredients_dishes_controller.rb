@@ -5,6 +5,7 @@ class IngredientsDishesController < ApplicationController
     @current_ingredient_id = params[:ingredient_id]
     @ingredients_dishes = IngredientsDish.new
   end
+
   def create
     p "I hit my route successfully", ingredients_dish_params
     @ingredients_dish = IngredientsDish.new(ingredients_dish_params)
