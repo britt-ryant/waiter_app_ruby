@@ -6,7 +6,11 @@
       <%= link_to "Delete this dish from your order?", user_dish_path(dish.id), method: :delete %><br>
   <% end %>
 <% else %>
-  <p>You have no orders, get servin!</p>
+  <% if current_user.auth == 2 %>
+    <p><%= @user.email %> doesn't have any current orders.</p>
+  <% else %>
+    <p>You have no orders, get servin!</p>
+  <% end %>
 <% end %>
 <% if @user.ingredients.length > 0 %>
   <strong>Alergies:</strong>
@@ -15,5 +19,9 @@
     <%= link_to "Remove this Allergy", user_ingredient_path(ingredient.id), method: :delete %>
   <% end %>
 <% else %>
-  <p>No allergies in your section? That can't be correct...</p>
+  <% if current_user.auth == 2 %>
+    <p><%= @user.email %> doesn't have any allergies in their section.</p>
+  <% else %>
+    <p>No allergies in your section? That can't be correct...</p>
+  <% end %>
 <% end %>
