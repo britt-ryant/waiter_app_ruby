@@ -6,6 +6,11 @@
   <h4>Ingredients:</h4>
   <% @dish.ingredients.each do |ing| %>
     <%= link_to "#{ing[:name]}", ingredient_path(ing[:id]) %>
+    <%= form_tag("/ingredients_dishes/#{ing.id}", method: "delete") do %>
+      <%= hidden_field(:ingredient_id, "", :value=>ing.id )%>
+      <%= hidden_field(:dish_id, "", :value=>@dish.id )%>
+      <%= submit_tag( "Delete #{ing[:name]} form #{@dish.name}")%>
+    <%end%>
       <%= form_tag("/user_ingredients", method: "post") do %>
         <%= hidden_field(:ingredient_id, "", :value=>ing.id )%>
         <%= hidden_field(:user_id, "", :value=>current_user.id )%>

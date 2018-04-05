@@ -4,6 +4,10 @@
 <br><br>
 <% @ingredients.each do |ing| %>
   <p><%= link_to "#{ing[:name]}", ingredient_path(ing.id) %></p>
+  <p><%= link_to "Add to dish",
+                  :controller=> "ingredients_dishes",
+                  :action=> "new",
+                  :ingredient_id=>ing[:id] %></p>
   <%= form_tag("/user_ingredients", method: "post") do %>
     <%= hidden_field(:ingredient_id, "", :value=>ing.id )%>
     <%= hidden_field(:user_id, "", :value=>current_user.id )%>
