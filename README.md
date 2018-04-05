@@ -11,17 +11,17 @@ Description:
 
 Technologies used to create this app:
 
-  --> HTML
-  --> CSS
-  --> Ruby on Rails
-  --> jQuery
-  --> ActiveRecord
-  --> Postgresql
+  --> HTML  
+  --> CSS  
+  --> Ruby on Rails  
+  --> jQuery  
+  --> ActiveRecord  
+  --> Postgresql  
 
 Room for improvement:
 
-  --> some of the overall CRUD abilities should be slightly more limited
-  --> The authorization level of the user is hardcoded into the db, we should have the ability to create that on the fly
-  --> Some of the table queries involving active record can probably be more efficient
-  --> styling
+  --> some of the overall CRUD abilities should be slightly more limited  
+  --> The authorization level of the user is hardcoded into the db, we should have the ability to create that on the fly  
+  --> Some of the table queries involving active record can probably be more efficient  
+  --> styling  
   --> The ability to actually submit the order and no longer modify, once it is picked up by the admin user (chef)
