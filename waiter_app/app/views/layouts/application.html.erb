@@ -4,7 +4,7 @@
     <title>WaiterApp</title>
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/icon?family=Material\Icons" rel="stylesheet">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -16,27 +16,56 @@
        <p class="alert alert-success"><%= alert %></p>
       <%end %>
 
-      <nav>
       <% if user_signed_in? %>
       <pry>
-        <%= link_to "Delete this user?", user_path(current_user.id), method: :delete %>
-        Logged in as <strong><%= link_to " #{current_user.email}", user_path(current_user.id) %></strong>.
-        <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> |
+      <nav>
+        <div class="nav-wrapper blue-grey darken-1">
+          <ul id="nav-mobile" class="left">
+            <li>
+              <%= link_to "<button class='waves-effect waves-light btn'>#{current_user.email}</button>".html_safe, user_path(current_user.id) %>
+            </li>
+            <li>
+              <%= link_to "<button class='waves-effect waves-light btn'>Edit Profile</button>".html_safe, edit_user_registration_path, :class => 'navbar-link' %>
+            </li>
+            <li>
+              <%= link_to "<button class='waves-effect waves-light btn'>Dishes</button>".html_safe, dishes_path %>
+            </li>
+            <li>
+              <%= link_to "<button class='waves-effect waves-light btn'>Ingredients</button>".html_safe, ingredients_path %>
+            </li>
+            <% if current_user.auth == 2 %>
+              <li>
+                <%= link_to "<button class='waves-effect waves-light btn'>All Orders</button>".html_safe, users_path %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </nav>
       <% else %>
-        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-        <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %> |
+        <%= link_to "<button class='waves-effect waves-light btn'>Sign Up</button>".html_safe, new_user_registration_path, :class => 'navbar-link'  %>
+        <%= link_to "<button class='waves-effect waves-light btn'>Login</button>".html_safe, new_user_session_path, :class => 'navbar-link'  %>
       <% end %>
-      <%= link_to "Dishes", dishes_path %> |
-      <%= link_to "Ingredients", ingredients_path %>
-    </nav>
     <main>
     <div class="container">
       <%= yield %>
     </div>
     </main>
     <footer>
-      <p>Made with 🍎 by Ryan and Casey</p>
+      <nav>
+        <div class="nav-wrapper blue-grey darken-1">
+          <% if user_signed_in? %>
+            <ul id="nav-mobile" class="left">
+              <li>
+                <%= link_to "<button class='waves-effect waves-light btn'>Delete User</button>".html_safe, user_path(current_user), method: :delete %>
+              </li>
+              <li>
+                <%= link_to "<button class='waves-effect waves-light btn'>Log Out</button>".html_safe, destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
+          <% end %>
+        <p>Made with 🍎 by Ryan and Casey</p>
+      </div>
+    </nav>
     </footer>
   </body>
 </html>

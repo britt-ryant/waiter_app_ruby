@@ -1,11 +1,23 @@
-<div class='dish-container'>
-  <h1><%= @ingredient[:name] %></h1>
+<div class="card blue-grey lighten-4">
+  <h2><%= @ingredient[:name] %></h2>
   <p><%=@ingredient[:description] %></p>
-  <h2>All Dishes that include this ingredient</h2>
-  <% @ingredient.dishes.each do |dish| %>
-    <%= button_to "#{dish[:name]}", dish_path(dish[:id]) %><br><br>
-  <% end %>
-  <%= button_to "Edit this ingredient", edit_ingredient_path(@ingredient.id) %>
-  <%= button_to "Delete this ingredient?", ingredient_path(@ingredient.id), method: :delete %>
-  <%= button_to "Back to ingredients", ingredients_path %>
 </div>
+<% if @ingredient.dishes.length > 0 %>
+  <h4>All Dishes that include this ingredient</h4>
+  <div class="section">
+    <div class="ingredients-grid">
+      <div class="col s4 l4 m4 places-holder">
+        <% @ingredient.dishes.each do |dish| %>
+          <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>#{dish[:name]}</button>".html_safe, dish_path(dish[:id]) %><br><br>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <p>Hm, looks like this isn't in anything we currently offer. Lucky you...</p>
+  <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>Edit</button>".html_safe, edit_ingredient_path(@ingredient.id) %>
+  <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>Remove</button>".html_safe, ingredient_path(@ingredient.id), method: :delete %>
+<% end %>
+<br>
+<br>
+<%= link_to "<button style='width:25%' class='waves-effect waves-light btn'>Back</button>".html_safe, ingredients_path %>
