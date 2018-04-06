@@ -1,42 +1,28 @@
 <div class="dish-index-container">
   <h1>All Dishes</h1>
-  <%= link_to "Create New Dish", new_dish_path %>
+  <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>Create new dish!</button>".html_safe, new_dish_path %>
   <br>
-  <% @dishes.each do |dish| %>
-      <br>
-      <h3><%= dish.name %></h3>
-      <%= link_to "Let's get a closer look...", dish_path(dish.id) %>
-      <p><%= dish.description %></p>
-      <p>Course: <%= dish.course %></p>
-      <p>Cost  :$<%= dish.cost %></p>
-      <%= form_tag("/user_dishes", method: "post") do %>
-        <%= hidden_field(:dish_id, "", :value=>dish.id )%>
-        <%= hidden_field(:user_id, "", :value=>current_user.id )%>
-        <%= submit_tag( "Add Dish")%>
-      <% end %>
-      <%= link_to "Edit this dish?", edit_dish_path(dish.id) %>
-      <%= link_to "Delete this dish?", dish_path(dish.id), method: :delete %>
-      <hr>
-  <% end %>
+  <div class="section">
+    <div class="dishes-grid">
+      <div class="row">
+        <% @dishes.each_slice(@dishes.length/2) do |dish| %>
+          <div class="col s6 l4 m4 places-holder">
+            <% dish.each do |d| %>
+              <div class="card hoverable blue-grey lighten-4">
+                <h4><%= d.name %></h4>
+                <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>Let's get a closer look</button>".html_safe, dish_path(d.id) %>
+                <p><%= d.description %></p>
+                <p>Course: <%= d.course %></p>
+                <p>Cost  :$<%= d.cost %></p>
+                <%= form_tag("/user_dishes", method: "post") do %>
+                  <%= hidden_field(:dish_id, "", :value=>d.id )%>
+                  <%= hidden_field(:user_id, "", :value=>current_user.id )%>
+                  <%= submit_tag( "Add Dish")%>
+                <% end %>
+                <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>Edit this dish?</button>".html_safe, edit_dish_path(d.id) %>
+                <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>Delete this dish?</button>".html_safe, dish_path(d.id), method: :delete %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
 </div>
-
-<h1>All Dishes</h1>
-<%= link_to "Create New Dish", new_dish_path %>
-
-<br>
-<% @dishes.each do |dish| %>
-    <br>
-    <h3><%= dish.name %></h3>
-    <%= link_to "Let's get a closer look...", dish_path(dish.id) %>
-    <p><%= dish.description %></p>
-    <p>Course: <%= dish.course %></p>
-    <p>Cost  :$<%= dish.cost %></p>
-    <%= form_tag("/user_dishes", method: "post") do %>
-      <%= hidden_field(:dish_id, "", :value=>dish.id )%>
-      <%= hidden_field(:user_id, "", :value=>current_user.id )%>
-      <%= submit_tag( "Add Dish")%>
-    <% end %>
-    <%= link_to "Edit this dish?", edit_dish_path(dish.id) %>
-    <%= link_to "Delete this dish?", dish_path(dish.id), method: :delete %>
-    <hr>
-<% end %>

@@ -1,35 +1,28 @@
-<<<<<<< HEAD
-<h1>List of all the ingredients used in our recipes</h1>
-<h2>select any ingredient to indicate an allergy</h2>
-<%= link_to "Add an ingredient that's not listed so we can be sure not to include it!", new_ingredient_path %>
+<h2>List of all the ingredients used in our recipes</h2>
+<h4>Select any ingredient to indicate an allergy</h4>
+<%= link_to "Add an ingredient that's not listed!", new_ingredient_path %>
 <br><br>
-<% @ingredients.each do |ing| %>
-  <p><%= link_to "#{ing[:name]}", ingredient_path(ing.id) %></p>
-  <p><%= link_to "Add to dish",
-                  :controller=> "ingredients_dishes",
-                  :action=> "new",
-                  :ingredient_id=>ing[:id] %></p>
-  <%= form_tag("/user_ingredients", method: "post") do %>
-    <%= hidden_field(:ingredient_id, "", :value=>ing.id )%>
-    <%= hidden_field(:user_id, "", :value=>current_user.id )%>
-    <%= submit_tag( "Add Allergy")%>
-=======
-
-  <h1>List of all the ingredients used in our recipes</h1>
-  <h2>select any ingredient to indicate an allergy</h2>
-  <%= link_to "Add an ingredient that's not listed so we can be sure not to include it!", new_ingredient_path %>
-  <br><br>
-  <% @ingredients.each do |ing| %>
-    <p><%= link_to "#{ing[:name]}", ingredient_path(ing.id) %></p>
-    <p><%= link_to "Add to dish",
-                    :controller=> "ingredients_dishes",
-                    :action=> "new",
-                    :ingredient_id=>ing[:id] %></p>
-    <%= form_tag("/user_ingredients", method: "post") do %>
-      <%= hidden_field(:ingredient_id, "", :value=>ing.id )%>
-      <%= hidden_field(:user_id, "", :value=>current_user.id )%>
-      <%= submit_tag( "Add Allergy")%>
-    <% end %>
->>>>>>> e12114df40e942ad88e1b2d7853ad598d71a6990
-  <% end %>
-<% end %>
+<div class="section">
+  <div class="dishes-grid">
+    <div class="row">
+      <% @ingredients.each_slice(@ingredients.length/2) do |ingredients| %>
+        <div class="col s6 l4 m4 places-holder">
+          <% ingredients.each do |ing| %>
+            <div class="card hoverable blue-grey lighten-4">
+              <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>#{ing[:name]}</button>".html_safe, ingredient_path(ing.id) %><br>
+              <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>Add to dish</button>".html_safe,
+                              :controller=> "ingredients_dishes",
+                              :action=> "new",
+                              :ingredient_id=>ing[:id] %>
+              <%= form_tag("/user_ingredients", method: "post") do %>
+                <%= hidden_field(:ingredient_id, "", :value=>ing.id )%>
+                <%= hidden_field(:user_id, "", :value=>current_user.id )%>
+                <%= submit_tag( "Add Allergy")%>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
