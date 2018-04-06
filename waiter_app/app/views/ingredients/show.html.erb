@@ -1,7 +1,9 @@
-<h2><%= @ingredient[:name] %></h2>
-<p><%=@ingredient[:description] %></p>
+<div class="card blue-grey lighten-4">
+  <h2><%= @ingredient[:name] %></h2>
+  <p><%=@ingredient[:description] %></p>
+</div>
 <% if @ingredient.dishes.length > 0 %>
-  <h2>All Dishes that include this ingredient</h2>
+  <h4>All Dishes that include this ingredient</h4>
   <div class="section">
     <div class="ingredients-grid">
       <div class="col s4 l4 m4 places-holder">
