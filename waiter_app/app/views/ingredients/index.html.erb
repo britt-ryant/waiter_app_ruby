@@ -1,12 +1,12 @@
 <h2>List of all the ingredients used in our recipes</h2>
 <h4>Select any ingredient to indicate an allergy</h4>
-<%= link_to "Add an ingredient that's not listed!", new_ingredient_path %>
+<%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>Create a new allergy!</button>".html_safe, new_ingredient_path %>
 <br><br>
 <div class="section">
   <div class="dishes-grid">
     <div class="row">
       <% @ingredients.each_slice(@ingredients.length/2) do |ingredients| %>
-        <div class="col s6 l4 m4 places-holder">
+        <div class="col s4 l4 m4 places-holder">
           <% ingredients.each do |ing| %>
             <div class="card hoverable blue-grey lighten-4">
               <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>#{ing[:name]}</button>".html_safe, ingredient_path(ing.id) %><br>

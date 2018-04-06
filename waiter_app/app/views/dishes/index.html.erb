@@ -6,11 +6,11 @@
     <div class="dishes-grid">
       <div class="row">
         <% @dishes.each_slice(@dishes.length/2) do |dish| %>
-          <div class="col s6 l4 m4 places-holder">
+          <div class="col s2 l4 m4 places-holder">
             <% dish.each do |d| %>
               <div class="card hoverable blue-grey lighten-4">
                 <h4><%= d.name %></h4>
-                <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>Let's get a closer look</button>".html_safe, dish_path(d.id) %>
+                <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>More Info</button>".html_safe, dish_path(d.id) %>
                 <p><%= d.description %></p>
                 <p>Course: <%= d.course %></p>
                 <p>Cost  :$<%= d.cost %></p>
@@ -19,8 +19,8 @@
                   <%= hidden_field(:user_id, "", :value=>current_user.id )%>
                   <%= submit_tag( "Add Dish")%>
                 <% end %>
-                <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>Edit this dish?</button>".html_safe, edit_dish_path(d.id) %>
-                <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>Delete this dish?</button>".html_safe, dish_path(d.id), method: :delete %>
+                <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>Edit</button>".html_safe, edit_dish_path(d.id) %>
+                <%= link_to "<button style='width:100%' class='waves-effect waves-light btn'>Delete</button>".html_safe, dish_path(d.id), method: :delete %>
               </div>
             <% end %>
           </div>

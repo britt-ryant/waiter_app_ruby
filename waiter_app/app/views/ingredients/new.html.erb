@@ -1,5 +1,5 @@
 <div class="ingredient-add-container"
-  <h1>Add a new Ingredient to our list so that we dont include it!</h1>
+  <h1>Add a new Allergy to our list so that we dont include it!</h1>
   <div class='form'>
     <form method="post" action="/ingredients">
       <input type="text" name="ingredient[name]" placeholder="What is the name of the ingredient?" />
@@ -11,7 +11,7 @@
         <% end %>
       </select>
       <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
-      <input type="submit" value="Add Ingredient!" />
+      <input type="submit" value="Add Allergy!" />
     </form>
   </div>
 </div>
